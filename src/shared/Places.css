@@ -1,0 +1,55 @@
+.mainContainer {
+    display: flex;
+    justify-content: space-between;
+    gap:20px;
+    flex-wrap: wrap;
+}
+.offersContainer{
+    color: var(--primary-color);
+    background-color: rgb(218, 219, 246);
+    margin: 5px;
+    overflow: hidden;
+    width: 100%;
+}
+.placeContainer{
+    flex-basis: calc(33.33% - 20px);
+    /* 33.33% to show three places in one row, subtracting gap */
+    padding: 0px;
+}
+.cardParaHeadingP {
+    font-size: large;
+    font-weight: 600;
+}
+
+.MoreDetailP {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cardFooterP {
+    text-align: center;
+    padding:15px;
+}
+
+.priceTextP {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.icon {
+    font-size: 16px;
+}
+
+.featuredText {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: max-content;
+    height: max-content;
+    z-index: 10;
+    background-color:#002F6C;
+    color: white;
+    padding: 5px;
+    border-radius: 5px 0 0 0;
+}

@@ -1,0 +1,298 @@
+h1{
+    text-align: center;
+    padding: 10px;
+    background-color: #96b6e0;
+    font-weight: 800;
+}
+
+h2,h3{
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(243, 243, 243, 0.842);
+    margin-left: 10%;
+    margin-right: 10%;
+}
+/*Background Img section*/
+.backgroundImage{
+    width: 100%;
+    height:500px;
+}
+
+/*First Intro section*/
+.firstSection{
+    margin-left:5%;
+    margin-right:5%;
+    margin-top:50px;
+}
+.introSection{
+    max-width: 100%;
+    height: auto;
+    display: flex;
+}
+.introContainer{
+    width:40%;
+    font-size: large;
+    margin-top: 20px;
+    text-align: justify;
+    padding: 0;
+}
+.infoContainer{
+    display: flex;
+    width:60%;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    overflow: hidden;
+    margin-left:10px;
+}
+.card{
+    margin:10px;
+    max-width:320px;
+    min-width:100px;
+    color: var(--secondary-color);
+    font-size: large;
+    font-weight: 500;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 10px;
+}
+.searchSection{
+    margin-top:50px;
+}
+.tripsSection{
+    margin-top: 50px;
+}
+.imagesInCard{
+    max-width:100%;
+    height:250px;
+    transition: transform 0.3;
+}
+.cardPara{
+    padding:10px;
+    margin:auto;
+    color: var(--secondary-color);
+    text-align: center;
+}
+.cardFooter{
+    background-color: var(--primary-color);
+}
+.hurryText{
+    font-weight: 600;
+    font-size: 25px;
+    color: var(--secondary-color);
+}
+.travelingText{
+    padding: 10px;
+    justify-content:center;
+}
+
+
+/*Special Offers section*/
+.containerTop{
+    display:flex;
+    flex-wrap: wrap;
+    margin-left: 5%;
+    margin-right:5%;
+    justify-content: space-between;
+}
+.cardContainer{
+    color: var(--primary-color);
+    background-color:#f3af1b;
+    margin:5px;
+    width:24%;
+    overflow: hidden;
+}
+.cardParaHeading{
+    font-size: large;
+    font-weight: 600;
+}
+.MoreDetails{
+    display: flex;
+    justify-content: space-between;
+}
+.cardFooter2{
+    padding: 15px;
+    text-align: center;
+}
+.imgContainer {
+    width: 100%;
+    height: 300px;
+    padding: 0;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+    position: relative;
+}
+.images{
+    width:100%;
+    height:300px;
+    padding: 0;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+    position: relative;
+}
+.images:hover{
+    transform: scale(1.1);
+}
+.priceText{
+    font-size: 22px;
+    font-weight: 600;
+}
+.offerText{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: max-content;
+    height: max-content;
+    z-index: 10;
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 5px;
+    border-radius: 20px;
+    font-size: large;
+    padding: 10px;
+}
+
+/* section*/
+.allTripsSection {
+    margin-top: 50px;
+}
+.tourListContainer {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+/*Our Services Section*/
+.servicesContainer{
+    display: flex;
+    margin-left: 10%;
+    margin-right:10%;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(223, 239, 253);
+}
+.serviceTitle{
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding:10px;
+    background-color: var(--primary-color);
+    color:var(--text-Color);
+}
+
+/*Experience Section*/
+.experinceMainDiv {
+    display: flex;
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 50px;
+    border-top: 0.5px solid rgb(206, 206, 248);
+    border-bottom: 0.5px solid rgb(206, 206, 248);
+}
+.expText{
+    font-size: 18px;
+    text-align: center;
+}
+.experienceSection{
+   width:60%;
+   margin:50px;
+}
+.experienceContent{
+    justify-content:space-between;
+}
+.counterWrapper{
+    display: flex;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    justify-content: space-between;
+}
+.counterBox p{
+    padding: 2px;
+    margin-top:10px;
+}
+.counterBox span{
+    margin: auto;
+    padding:10px;
+    width: 100px;
+    height:100px;
+    background: var(--secondary-color);
+    color: white;
+    font-size: 1.5rem;
+    font-weight:600;
+    border-radius: 10px 5px 10px 5px;
+}
+
+.expImgContainer{
+    width:40%;
+    margin-top: 50px;
+}
+.expImg{
+    height:200px;
+}
+
+/*Gallery Section*/
+.gallerySection{
+    margin-left:10%;
+    margin-right:10%;
+    margin-top:50px;
+}
+.galleryContainer{
+    margin-top:10px;
+}
+.masonryImages{
+    transition: 0.2s;
+}
+.masonryImages:hover{
+    transform:scale(1.1);
+}
+
+/*Testimonial Container*/
+.testimonialSection{
+    margin-top: 50px;
+}
+.testimonialContainer{
+    margin-left:10%;
+    margin-right:10%;
+}
+.testimonialDiv{
+    display: flex;
+}
+.slider{
+    display: flex;
+}
+.peopleImg{
+    width: 6rem;
+    height: 6rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 50px;
+    margin:15px;
+    padding:0;
+}
+
+/*NEWS letter section*/
+.NewsSection{
+    margin-left:10%;
+    margin-right:10%;
+}
+@media only screen and (max-width: 1200px) {
+    .card {
+        max-width: 100%;
+        /* Images will occupy the full width of the container */
+    }
+}
+
+@media (max-width: 768px) {
+    .imagesInCard {
+        transform: scale(0.8);
+    }
+}
+
+@media (max-width: 480px) {
+    .imagesInCard {
+        transform: scale(0.6);
+    }
+}

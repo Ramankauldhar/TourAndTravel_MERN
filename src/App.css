@@ -1,0 +1,56 @@
+:root{
+  --primary-color: #002F6C;
+  --secondary-color: #f3af1b;
+  --text-Color: #d1e3fa;
+  --heading-color: #002F6C;
+  --sub-headings-color: rgb(107, 107, 107);
+  --font-names: Mako, Cambria, Georgia, serif;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  box-sizing: border-box;
+  font-family: var(--font-names);
+  font-size: 20px;
+}
+h1, h2, h3, h4, h5, h6, h7{
+  color: var(--heading-color);
+}
+
+a{
+  text-decoration: none;
+  color: unset;
+}
+ul{
+  list-style: none;
+}
+.primaryBtn {
+  background: transparent !important;
+  text-decoration: none;
+  border: none;
+  border-radius: 10px;
+  padding: 0.5rem;
+  color: white;
+  margin-right: 10px;
+}
+
+.primaryBtn a {
+  text-decoration: none;
+  color: white;
+}
+
+.secondaryBtn {
+  background: var(--secondary-color) !important;
+  color: black;
+  border: none;
+  border-radius: 10px;
+  margin-right:10px;
+}
+
+.secondaryBtn a {
+  text-decoration: none;
+  color: white;
+}

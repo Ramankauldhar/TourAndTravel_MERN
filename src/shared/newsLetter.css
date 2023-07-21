@@ -1,0 +1,41 @@
+.newletterContainer{
+    margin-top:50px;
+    background-color: #f3f5f7;
+    text-align: center;
+    justify-content: center;
+}
+.newsletter{
+    text-align: center;
+}
+.newsLetterImg img{
+    height: 300px;
+    width:100%;
+    padding:10px;
+}
+.newsLetterInput{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:0.5rem;
+    text-align: center;
+    border-radius:5px;
+    margin-left:10px;
+}
+.newsletter h2{
+    background-color: #f3f5f7;
+}
+.newsletterBtn{
+    background-color: red;
+    padding: 10px 40px;
+    border: none;
+    margin-left:10px;
+    color: white;
+}
+.leftText, .rightText{
+    padding:10px;
+    text-align: center;
+    margin: auto;
+    display: block;
+    justify-content: center;
+    width:50%;
+}
