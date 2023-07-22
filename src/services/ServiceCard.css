@@ -1,8 +1,6 @@
 .services{
-  text-align: center;
-  border-left:1px solid var(--primary-color);
   margin:10px;
-  padding-left:20px;
+  text-align: center;
 }
 .serviceImg{
     height: 25px;

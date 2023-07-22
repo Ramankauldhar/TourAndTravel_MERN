@@ -1,7 +1,7 @@
 .mainContainer {
     display: flex;
     justify-content: space-between;
-    gap:20px;
+    gap:5px;
     flex-wrap: wrap;
 }
 .offersContainer{
@@ -12,7 +12,7 @@
     width: 100%;
 }
 .placeContainer{
-    flex-basis: calc(33.33% - 20px);
+    flex-basis: calc(33.33% - 5px);
     /* 33.33% to show three places in one row, subtracting gap */
     padding: 0px;
 }
@@ -52,4 +52,24 @@
     color: white;
     padding: 5px;
     border-radius: 5px 0 0 0;
+}
+
+@media only screen and (max-width: 1200px) {
+    .placeContainer{
+        flex-basis: calc(50% - 5px);
+    }
+}
+@media only screen and (max-width: 750px) {
+    .offersContainer{
+        min-height: 480px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .mainContainer {
+        display: block;
+    }
+    .placeContainer{
+        flex-basis: calc(50% - 20px);
+    }
 }

@@ -1,3 +1,8 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin:0;
+}
 h1{
     text-align: center;
     padding: 10px;
@@ -15,7 +20,8 @@ h2,h3{
 /*Background Img section*/
 .backgroundImage{
     width: 100%;
-    height:500px;
+    height:550px;
+    background-attachment: fixed;
 }
 
 /*First Intro section*/
@@ -30,15 +36,13 @@ h2,h3{
     display: flex;
 }
 .introContainer{
-    width:40%;
+    width:38%;
     font-size: large;
-    margin-top: 20px;
-    text-align: justify;
-    padding: 0;
+    padding-top: 10px;
 }
 .infoContainer{
     display: flex;
-    width:60%;
+    width:62%;
     flex-wrap: wrap;
     justify-content:space-between;
     overflow: hidden;
@@ -56,13 +60,9 @@ h2,h3{
     flex-direction: column;
     align-items: center;
     margin: 0 10px;
+    background-color: var(--primary-color);
 }
-.searchSection{
-    margin-top:50px;
-}
-.tripsSection{
-    margin-top: 50px;
-}
+
 .imagesInCard{
     max-width:100%;
     height:250px;
@@ -77,14 +77,27 @@ h2,h3{
 .cardFooter{
     background-color: var(--primary-color);
 }
+.textContainer{
+    margin-left:10px;
+}
 .hurryText{
     font-weight: 600;
     font-size: 25px;
     color: var(--secondary-color);
+    text-shadow: 2px 2px var(--primary-color);
+    text-align: center;
 }
 .travelingText{
     padding: 10px;
+    text-align: justify;
     justify-content:center;
+}
+
+/*Search Section*/
+.searchSection{
+    margin-top:50px;
+    margin-left: 10%;
+    margin-right:10%;
 }
 
 
@@ -153,23 +166,28 @@ h2,h3{
     padding: 10px;
 }
 
-/* section*/
+/* all trips section*/
+.tourListContainer {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.tripsSection{
+    margin-top: 50px;
+}
 .allTripsSection {
     margin-top: 50px;
 }
-.tourListContainer {
-    margin-left: 10%;
-    margin-right: 10%;
-}
+
 
 /*Our Services Section*/
 .servicesContainer{
     display: flex;
+    flex-wrap: wrap;
     margin-left: 10%;
     margin-right:10%;
-    align-items: center;
-    justify-content: center;
     background-color: rgb(223, 239, 253);
+    overflow: scroll;
+    min-height: 250px;
 }
 .serviceTitle{
     display: flex;
@@ -198,7 +216,6 @@ h2,h3{
 }
 .experienceSection{
    width:60%;
-   margin:50px;
 }
 .experienceContent{
     justify-content:space-between;
@@ -215,9 +232,8 @@ h2,h3{
     margin-top:10px;
 }
 .counterBox span{
-    margin: auto;
+    margin: 5px;
     padding:10px;
-    width: 100px;
     height:100px;
     background: var(--secondary-color);
     color: white;
@@ -229,6 +245,7 @@ h2,h3{
 .expImgContainer{
     width:40%;
     margin-top: 50px;
+    display: inline;
 }
 .expImg{
     height:200px;
@@ -279,20 +296,59 @@ h2,h3{
     margin-right:10%;
 }
 @media only screen and (max-width: 1200px) {
-    .card {
-        max-width: 100%;
-        /* Images will occupy the full width of the container */
+    .cardContainer{
+        width: 48%;
+    }
+}
+@media only screen and (max-width: 1000px){
+    .introSection{
+        display: block;
+    }
+    .introContainer, .infoContainer{
+        width: 100%;
     }
 }
 
-@media (max-width: 768px) {
+@media only screen and (max-width: 900px) {
+    .backgroundImage{
+        height: 350px;
+    }
     .imagesInCard {
         transform: scale(0.8);
+        padding:0;
+        margin:0;
     }
+    .experinceMainDiv {
+        display: block;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .expImg{
+        display: none;
+    }
+    .experienceSection{
+        width:100%;
+    }
+    
 }
 
-@media (max-width: 480px) {
+@media only screen and (max-width: 580px){
+    .backgroundImage{
+        display: none;
+    }
+    .card{
+        display: block;
+        flex-direction:unset;
+    }
+    .introSection{
+        display: block;
+    }
     .imagesInCard {
-        transform: scale(0.6);
+        width:100%;
+        padding:0;
+        margin:0;
+    }
+    .cardContainer{
+        width:100%;
     }
 }

@@ -1,6 +1,6 @@
 import React, {useRef, useState} from 'react';
 import { Col, Form, FormGroup } from "reactstrap";
-import searchIcon from "./../Images/icons/search-line.png";
+
 import groupIcon from "./../Images/icons/group-fill.png";
 import locationIcon from "./../Images/icons/map-pin-line.png";
 import priceTagIcon from "./../Images/icons/price-tag-fill.png";
@@ -26,26 +26,27 @@ const SearchBar = () => {
 
   return <>
   <Col lg='12'>
+  <p className='errorText'>{errorText}</p>
     <div className='searchBar'>
       <Form className='form'>
         <FormGroup className='d-flex gap-3 formGroup'>
           <span><img className='icon' src={locationIcon} alt='group' /></span>
-          <div>
-            <p>Country: </p>
+          <div className='fieldDisplay'>
+            <label>Country: </label>
             <input type="text" placeholder='Search a country name' ref={placeRef}/>
           </div>
         </FormGroup>
         <FormGroup className='d-flex gap-3 formGroup'>
           <span><img className='icon' src={groupIcon} alt='group' /></span>
-          <div>
-            <p>No of Person: </p>
+          <div className='fieldDisplay'>
+            <label>Persons: </label>
             <input type="number" placeholder='1' ref={noOfPeopleRef}/>
           </div>
         </FormGroup>
         <FormGroup className='d-flex gap-3 formGroup'>
           <span><img className='icon' src={priceTagIcon} alt='group' /></span>
-          <div>
-            <p>Price: </p>
+          <div className='fieldDisplay'>
+            <label>Price: </label>
             <input type="number" placeholder='$' ref={priceRef}/>
           </div>
         </FormGroup>
@@ -53,7 +54,7 @@ const SearchBar = () => {
           <p></p>
          <p className='searchButton'>Search</p>
         </span>
-        <p className='errorText'>{errorText}</p>
+        
       </Form>
     </div>
   </Col>

@@ -20,7 +20,7 @@ const sericesArray = [
     {
         imageUrl: serviceIcon,
         title: "Excellent Customer Service",
-        desc: "Your satisfaction is our first priority, therefore we put our heart down to give you a great experience while travelling with us as we value you and your money. You trust makes us happy.",
+        desc: "Your satisfaction is our first priority, therefore we put our heart down to give you a great experience while travelling with us as we value you and your money.",
     },
     {
         imageUrl: serviceIcon,

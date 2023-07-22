@@ -25,6 +25,7 @@ const navigation=[
 ]
 
 function Header() {
+
   return (
    <header className='header'>
         <div className='navBarLeft'>

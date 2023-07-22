@@ -1,12 +1,22 @@
 import React from 'react';
-import backgroundImg from '../Images/backgroundImg.jpg';
+import PlacesCard from '../shared/PlacesCard';
+import TourList from '../components/toursList/TourList';
+import SearchBar from '../shared/SearchBar';
+import NewsLetter from '../shared/NewsLetter';
+import { Container, Row } from 'reactstrap';
+import './../styles/places.css';
+
+import backgroundImg from '../Images/backgroundImg.jpeg';
+
+
 
 const Places = () => {
   return (
     <>
        <section>
-         <img src={backgroundImg} alt="background" className='backgroundImage'/>
+         <img src={backgroundImg} alt="background" className='topBackgroundImage'/>
        </section>
+
     </>
   )
 }

@@ -11,7 +11,7 @@ const ServiceCard = ({item}) => {
         <img src={imageUrl} alt="icons" className='serviceImg'/>
       </div>
       <h5>{title}</h5>
-      <p>{desc}</p>
+      <p className='textInServices'>{desc}</p>
     </div>
   )
 }

@@ -9,7 +9,9 @@ import Gallery from '../components/Gallery/Gallery';
 import Testimonials from '../components/Testimonial/Testimonials';
 import NewsLetter from '../shared/NewsLetter';
 
-import backgroundImg from '../Images/backgroundImg.jpg';
+import TextRotator from '../components/TextAndPictureRotator/TextRotator';
+import ImageRotator from '../components/TextAndPictureRotator/ImageRotator';
+
 import memoriesImg from '../Images/memories.jpg';
 import exploreWorldImg from '../Images/exploreWorld.jpg';
 import captureMomentsImg from '../Images/captureMoments.jpg';
@@ -23,18 +25,21 @@ import experienceImg from '../Images/experience.png';
 
 const Home = () => {
 return <> 
-  <section>
-         <img src={backgroundImg} alt="background" className='backgroundImage'/>
+  <section className='backgroundImage'>
+       <ImageRotator />  
   </section>
   <h1>Travel Around The World With Us</h1>
 
     <section className='firstSection'>
           <div className="introSection">
             <div className="introContainer">
+              <div class="textContainer">
+                <TextRotator  />
+              </div>
               <p className="travelingText"><b>Traveling</b> makes you happy especially when you travel with your lovedones. 
                 Traveling gives you a chance to make beautiful memories with others by exploring beautiful places around the world.
-                Traveling joins the nations and its people. We are here to make your experience even more enjoyable and meaningful by providing you the best package and travel guide to explore many places around the world.</p>
-              <p className='hurryText'>Hurry Up! Book Your next trip with us.</p>  
+                We are here to make your experience even more enjoyable and meaningful by providing you the best package and travel guide to explore many places around the world.</p>
+  
             </div>
             
             <div className="infoContainer">
@@ -44,13 +49,13 @@ return <>
                   <p className='cardPara'>Travel to Create memories with your friends and family</p>
                 </div>
               </div>
-              <div className='card card2'>
+              <div className='card'>
                 <img src={exploreWorldImg} alt='Explore the World' className='imagesInCard'/>
                 <div className='cardFooter'>
                   <p className='cardPara'>Travel to Explore the world to enhance your knowledge</p>
                 </div>
               </div>
-              <div  className='card card3'>
+              <div  className='card'>
                 <img src={captureMomentsImg} alt='Capture Moments' className='imagesInCard'/>
                 <div className='cardFooter'>
                   <p className='cardPara'>Travel to Capture the moments on beautiful places</p>

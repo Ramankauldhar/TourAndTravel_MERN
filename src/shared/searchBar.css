@@ -2,8 +2,6 @@
     background-color: rgb(228, 224, 224);
     align-items: center;
     justify-content: center;
-    margin-left:20%;
-    margin-right:20%;
     margin-top:10px;
     padding:20px;
     font-size: 18px;
@@ -12,6 +10,7 @@
 }
 .form{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 }
 input{
@@ -19,20 +18,12 @@ input{
     border-radius: 20PX;
     margin-left: 10px;
     padding:10px;
-    width:100%;
-}
-.searchHeading{
-    background-color: #a5c6f0;
-    margin-left: 20%;
-    margin-right: 20%;
-    text-align: center;
-    padding:10px;
-    font-size: 25px;
-    font-weight: 800;
+    width:150px;
 }
 .errorText{
     color: red;
     margin-left:10px;
+    text-align: center;
 }
 .icon{
     height:38px;
@@ -44,4 +35,12 @@ input{
     margin-left: 50px;
     background-color: var(--primary-color);
     color:white;
+}
+
+@media only screen and (max-width: 826px) {
+    .form{
+        display: flex;
+        flex-direction: column; /* Change flex direction to column for stacking elements */
+        align-items: center; 
+    }
 }
