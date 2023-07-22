@@ -1,4 +1,32 @@
-.topBackgroundImage{
+.tripsHeading{
+    background-image: url("../Images/backgroundImg.jpeg");
+    height: 300px;
     width:100%;
-    height: 350px;
+    background-size: cover;
+    margin:0;
+    padding:0;
+}
+.SearhSection{
+    margin-top: 30px;
+    padding:0;
+}
+.tourListSection{
+    margin-top:50px;
+}
+.pagination span{
+    width: 2rem;
+    height: 2rem;
+    padding: 5px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--secondary-color);
+    color: var(--primary-color);
+    cursor:pointer;
+}
+
+.activePage{
+    background-color: var(--secondary-color);
+    color:white !important; 
 }

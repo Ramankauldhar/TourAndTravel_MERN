@@ -11,12 +11,12 @@ const navigation=[
     display:'Home'
   },
   {
-    path:"",
-    display:'About Us'
+    path:"/places",
+    display:'All Trips'
   },
   {
-    path:"/places",
-    display:'Places To Visit'
+    path:"",
+    display:'About Us'
   },
   {
     path:"",
