@@ -23,11 +23,11 @@ img{
     padding: 10px;
 }
 .navBar_item a:hover{
-    background-color: var(--secondary-color);
+    background-color: white;
     color: var(--primary-color);
 }
 .navBar_item a.active_link{
-    color: grey;
+    color: var(--secondary-color);
 }
 .navBarLeft{
     display: flex;

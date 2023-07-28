@@ -1,0 +1,77 @@
+.toursContainer{
+    position: relative;
+}
+.tourImages{
+    width:100%;
+    height:500px;
+    display: block;
+    padding: 0;
+    margin:0;
+    object-fit: cover;
+}
+.tourName{
+    position: absolute;
+    top:20px;
+    left:40%;
+    width:max-content;
+    padding:10px;
+    background-color: white;
+    color: var(--primary-color);
+    transform: translate(-50%, -50%);
+}
+.tourContent{
+    text-align: center;
+    width: 100%;
+}
+.rating{
+    text-align: center;
+}
+.tourinfo{
+    display: flex;
+    text-align: center;
+    width:80%;
+    margin: auto;
+    font-size: 25px;
+}
+.tourinfo div{
+    width:33.33%;
+    margin: 0 10px;
+    padding: 10px;
+    background-color: #f1f5fa;
+    border-radius: 20px;
+}
+.cardHeading{
+    color: var(--primary-color);
+}
+.titleText{
+    font-size: 25px;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+.extraInfoContainer ul{
+    list-style:inherit;
+}
+.tripDayPlansContainer{
+    margin-top: 50px;
+    display: flex;
+    background-color: var(--secondary-color);
+}
+.extraInfoContainer{
+    width:25%;
+    padding:10px;
+    margin: 40px 30px;
+}
+.planContainer{
+    width:75%;
+    margin:40px;
+}
+
+
+@media screen and (max-width: 600px) {
+    .tripDayPlansContainer, .tourinfo{
+        display: block;
+    }
+    .extraInfoContainer,.planContainer, .tourinfo div{
+        width:100%;
+    }
+}

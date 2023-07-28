@@ -18,14 +18,34 @@ h2,h3{
     margin-right: 10%;
 }
 /*Background Img section*/
-.backgroundImage{
+.backgroundImage, .backgroundVideo{
     width: 100%;
-    height:550px;
+    height:700px;
     background-attachment: fixed;
+    position: relative;
+    display: inline-block;
+    object-fit:fill;
+}
+.textOnImages{
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+.firstText{
+    font-size: 40px;
+    font-weight: 400;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+.secondText{
+    font-size: 30px;
 }
 
 /*First Intro section*/
 .firstSection{
+    position: relative;
     margin-left:5%;
     margin-right:5%;
     margin-top:50px;
@@ -67,6 +87,7 @@ h2,h3{
     max-width:100%;
     height:250px;
     transition: transform 0.3;
+    object-fit: cover;
 }
 .cardPara{
     padding:10px;
@@ -142,6 +163,7 @@ h2,h3{
     padding: 0;
     cursor: pointer;
     transition: 0.4s ease-in-out;
+    object-fit: cover;
     position: relative;
 }
 .images:hover{

@@ -10,7 +10,7 @@ import Testimonials from '../components/Testimonial/Testimonials';
 import NewsLetter from '../shared/NewsLetter';
 
 import TextRotator from '../components/TextAndPictureRotator/TextRotator';
-import ImageRotator from '../components/TextAndPictureRotator/ImageRotator';
+import MediaRotator from '../components/TextAndPictureRotator/MediaRotator';
 
 import memoriesImg from '../Images/memories.jpg';
 import exploreWorldImg from '../Images/exploreWorld.jpg';
@@ -25,8 +25,8 @@ import experienceImg from '../Images/experience.png';
 
 const Home = () => {
 return <> 
-  <section className='backgroundImage'>
-       <ImageRotator />  
+  <section data-scroll data-scroll-speed="-5" id='main' className='backgroundImage'>
+       <MediaRotator />
   </section>
   <h1>Travel Around The World With Us</h1>
 
