@@ -1,11 +1,15 @@
 import React , { useEffect }  from "react";
 import '../styles/tripStyles.css';
+
 import SydneyOperaHouseImg from '../Images/sydney.jpeg';
 import MarriottImg from '../Images/Marriott.jpeg';
 import bondiBeachImg from '../Images/bondiBeach.jpeg';
 import kangarooislandImg from '../Images/kangarooisland.jpeg';
 import MelbourneImg from '../Images/Melbourne.jpeg';
+import cityPalaceImg from '../Images/cityPalace.jpeg';
 import DaintreeRainforestImg from '../Images/DaintreeRainforest.jpeg';
+import palmJumeirahImg from '../Images/palmJumeirah.avif';
+import returnImg from '../Images/return.jpeg';
 
 const AustraliaNewZealandTrip = () => {
   useEffect(() => {
@@ -32,17 +36,15 @@ const AustraliaNewZealandTrip = () => {
   }, []);
   
 
-    return(
-        
+    return( 
       <div class="timeline">
-        <h2>Itinerary Summery</h2>
         <div class="detailContainer left">
           <div class="content">
             <button type="button" className="collapsible">Day1: Welcome to the Marriott Hotel</button>
             <div className="daysPlanText"> 
                <img src={MarriottImg} alt="Marriott" className="planImages"/>
                <div className="planDetailsText">
-                  <p className="planHeading">Welcome to the Marriott Hotel</p>
+                  <p className="planHeading">Marriott Hotel</p>
                   <p>You will be advised to take rest for the first day. In the evening, you will be taken to hotel's party room.
                     Where you guys can meet with other people and the hotel employees will arrange a welcome party for you.
                   </p>
@@ -112,11 +114,11 @@ const AustraliaNewZealandTrip = () => {
         </div>
         <div class="detailContainer left">
           <div class="content">
-            <button type="button" className="collapsible">Day7: Melbourne City</button>
+            <button type="button" className="collapsible">Day7: Fly to New Zealand</button>
             <div className="daysPlanText"> 
-               <img src={MelbourneImg} alt="Melbourne City" className="planImages"/>
+               <img src={returnImg} alt="Melbourne City" className="planImages"/>
                <div className="planDetailsText">
-                  <p className="planHeading">Melbourne City</p>
+                  <p className="planHeading">New Zealand</p>
                   <p>You will be taken to visit the Sydney Opera House.The Sydney Opera House is a multi-venue performing arts centre in Sydney. Located on the foreshore of Sydney Harbour, it is widely regarded as one of the world's most famous and distinctive buildings and a masterpiece of 20th-century architecture.</p>
                </div>
             </div>
@@ -124,11 +126,11 @@ const AustraliaNewZealandTrip = () => {
         </div>
         <div class="detailContainer right">
           <div class="content">
-            <button type="button" className="collapsible">Day8: Daintree Rainforest</button>
+            <button type="button" className="collapsible">Day8: Queenstown Visit</button>
             <div className="daysPlanText"> 
                <img src={DaintreeRainforestImg} alt="Daintree Rainforest" className="planImages"/>
                <div className="planDetailsText">
-                  <p className="planHeading">Daintree Rainforest</p>
+                  <p className="planHeading">Queenstown Visit</p>
                   <p>You will be taken to visit the Sydney Opera House.The Sydney Opera House is a multi-venue performing arts centre in Sydney. Located on the foreshore of Sydney Harbour, it is widely regarded as one of the world's most famous and distinctive buildings and a masterpiece of 20th-century architecture.</p>
                </div>
             </div>
@@ -136,11 +138,11 @@ const AustraliaNewZealandTrip = () => {
         </div>
         <div class="detailContainer left">
           <div class="content">
-            <button type="button" className="collapsible">Day9: Welcome to the Marriott Hotel At Newzealand</button>
+            <button type="button" className="collapsible">Day9: Auckland Visit</button>
             <div className="daysPlanText"> 
-               <img src={MarriottImg} alt="Marriott" className="planImages"/>
+               <img src={cityPalaceImg} alt="Marriott" className="planImages"/>
                <div className="planDetailsText">
-                  <p className="planHeading">Welcome to the Marriott Hotel</p>
+                  <p className="planHeading">Auckland Visit</p>
                   <p>You will be advised to take rest for the first day. In the evening, you will be taken to hotel's party room.
                     Where you guys can meet with other people and the hotel employees will arrange a welcome party for you.
                   </p>
@@ -150,11 +152,37 @@ const AustraliaNewZealandTrip = () => {
         </div>
         <div class="detailContainer right">
           <div class="content">
-            <button type="button" className="collapsible">Day10: Sydney Opera House Visit</button>
+            <button type="button" className="collapsible">Day10: Wellington Waterfront</button>
             <div className="daysPlanText"> 
-               <img src={SydneyOperaHouseImg} alt="Sydney Opera House" className="planImages"/>
+               <img src={bondiBeachImg} alt="Sydney Opera House" className="planImages"/>
                <div className="planDetailsText">
-                  <p className="planHeading">Sydney Opera House</p>
+                  <p className="planHeading">Wellington Waterfront</p>
+                  <p>You will be taken to visit the Sydney Opera House. The Sydney Opera House is a multi-venue performing arts centre in Sydney. Located on the foreshore of Sydney Harbour, it is widely regarded as one of the world's most famous and distinctive buildings and a masterpiece of 20th-century architecture.</p>
+               </div>
+            </div>
+          </div>
+        </div>
+        <div class="detailContainer left">
+          <div class="content">
+            <button type="button" className="collapsible">Day11: Rotorua Visit</button>
+            <div className="daysPlanText"> 
+               <img src={palmJumeirahImg} alt="Marriott" className="planImages"/>
+               <div className="planDetailsText">
+                  <p className="planHeading">Rotorua Visit</p>
+                  <p>You will be advised to take rest for the first day. In the evening, you will be taken to hotel's party room.
+                    Where you guys can meet with other people and the hotel employees will arrange a welcome party for you.
+                  </p>
+               </div>
+            </div>
+          </div>
+        </div>
+        <div class="detailContainer right">
+          <div class="content">
+            <button type="button" className="collapsible">Day12: Return </button>
+            <div className="daysPlanText"> 
+               <img src={returnImg} alt="Sydney Opera House" className="planImages"/>
+               <div className="planDetailsText">
+                  <p className="planHeading">Fly back to Home</p>
                   <p>You will be taken to visit the Sydney Opera House. The Sydney Opera House is a multi-venue performing arts centre in Sydney. Located on the foreshore of Sydney Harbour, it is widely regarded as one of the world's most famous and distinctive buildings and a masterpiece of 20th-century architecture.</p>
                </div>
             </div>

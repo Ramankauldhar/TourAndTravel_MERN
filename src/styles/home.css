@@ -13,9 +13,6 @@ h1{
 h2,h3{
     text-align: center;
     padding: 10px;
-    background-color: rgba(243, 243, 243, 0.842);
-    margin-left: 10%;
-    margin-right: 10%;
 }
 /*Background Img section*/
 .backgroundImage, .backgroundVideo{

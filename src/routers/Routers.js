@@ -8,6 +8,11 @@ import PlacesInfo from "./../pages/PlacesInfo";
 import Register from "./../pages/Register";
 import Search from "./../pages/Search";
 
+import TurkeyTrip from "../tripsPages/TurkeyTrip";
+import IndiaTrip from "../tripsPages/IndiaTrip";
+import DubaiTrip from "../tripsPages/DubaiTrip";
+import JapanSouthKoreaTrip from "../tripsPages/JapanSouthKoreaTrip";
+
 const Routers = () => {
   return (
     <Routes>
@@ -18,6 +23,10 @@ const Routers = () => {
       <Route path="/places/:id" element={<PlacesInfo />} />
       <Route path="/register" element={<Register />} />
       <Route path="/places/search" element={<Search />} />
+      <Route path="/turkey" element={<TurkeyTrip />} />
+      <Route path="/india" element={<IndiaTrip />} />
+      <Route path="/dubai" element={<DubaiTrip />} />
+      <Route path="/japan" element={<JapanSouthKoreaTrip />} />
     </Routes>
   );
 };

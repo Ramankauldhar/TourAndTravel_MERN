@@ -77,7 +77,7 @@ return <>
            <div className="containerTop">
               <div className='cardContainer'>
                 <div className='imgContainer'>
-                    <Link to="/places">
+                    <Link to="/turkey">
                        <img src={turkeyImg} alt='Memories' className='images'/>
                     </Link>
                     <span className='offerText'>Offer</span>
@@ -85,7 +85,7 @@ return <>
                  <div className='cardFooter2'>
                     <p className='cardParaHeading'>Turkey Trip</p>
                     <div className='MoreDetails'>
-                        <p>Length: 15 Days </p>
+                        <p>Length: 7 Days </p>
                         <p>was <del>$20,000</del> <ins className='priceText'>$10,000</ins></p>
                     </div>
                     <p>Package for 4 people</p>
@@ -93,7 +93,7 @@ return <>
               </div>
               <div  className='cardContainer'>
                 <div className='imgContainer'>
-                  <Link to="/places">
+                  <Link to="/india">
                    <img src={indiaImg} alt='Capture Moments' className='images'/>
                   </Link>
                   <span className='offerText'>Offer</span>
@@ -101,7 +101,7 @@ return <>
                 <div className='cardFooter2'>
                   <p className='cardParaHeading'>India Trip</p>
                   <div className='MoreDetails'>
-                    <p>Length: 18 Days </p>
+                    <p>Length: 7 Days </p>
                     <p>was <del>$25,000</del> <ins className='priceText'>$15,000</ins></p>
                   </div>
                   <p>Package for 5 people</p>
@@ -109,7 +109,7 @@ return <>
               </div>
               <div className='cardContainer'>
                  <div className='imgContainer'>
-                    <Link to="/places">
+                    <Link to="/dubai">
                       <img src={dubaiImg} alt='Explore the World' className='images'/>
                     </Link>
                     <span className='offerText'>Offer</span>
@@ -117,7 +117,7 @@ return <>
                 <div className='cardFooter2'>
                   <p className='cardParaHeading'>Dubai Trip</p>
                   <div className='MoreDetails'>
-                    <p>Length: 10 Days </p>
+                    <p>Length: 7 Days </p>
                     <p>was <del>$8,000</del> <ins className='priceText'>$6,000</ins></p>
                   </div>
                   <p>Package for 2 people</p>
@@ -125,7 +125,7 @@ return <>
               </div>
               <div  className='cardContainer'>
                 <div className='imgContainer'>
-                  <Link to="/places">
+                  <Link to="/japan">
                       <img src={japanImg} alt='Capture Moments' className='images'/>
                   </Link>
                   <span className='offerText'>Offer</span>
@@ -133,7 +133,7 @@ return <>
                 <div className='cardFooter2'>
                   <p className='cardParaHeading'>Japan and South Korea Trip</p>
                   <div className='MoreDetails'>
-                    <p>Length: 20 Days </p>
+                    <p>Length: 13 Days </p>
                     <p>was <del>$24,000</del> <ins className='priceText'>$20,000</ins></p>
                   </div>
                   <p>Package for 4 people</p>

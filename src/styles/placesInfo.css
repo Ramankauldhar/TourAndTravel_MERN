@@ -12,7 +12,7 @@
 .tourName{
     position: absolute;
     top:20px;
-    left:40%;
+    left:50%;
     width:max-content;
     padding:10px;
     background-color: white;
@@ -37,7 +37,7 @@
     width:33.33%;
     margin: 0 10px;
     padding: 10px;
-    background-color: #f1f5fa;
+    background-color: rgb(223, 239, 253);;
     border-radius: 20px;
 }
 .cardHeading{
@@ -48,22 +48,28 @@
     font-weight: 500;
     color: var(--primary-color);
 }
+.extraInfoContainer{
+    background-color: rgb(223, 239, 253);
+}
 .extraInfoContainer ul{
     list-style:inherit;
 }
 .tripDayPlansContainer{
-    margin-top: 50px;
+    margin-top: 10px;
     display: flex;
-    background-color: var(--secondary-color);
 }
 .extraInfoContainer{
     width:25%;
     padding:10px;
-    margin: 40px 30px;
+    margin:20px;
 }
 .planContainer{
     width:75%;
-    margin:40px;
+    margin:20px;
+}
+.planContainer h2{
+    background-color:rgb(223, 239, 253) ;
+    color: var(--primary-color);
 }
 
 

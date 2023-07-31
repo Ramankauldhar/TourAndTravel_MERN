@@ -12,7 +12,7 @@ const placesArray = [
         imageUrl: australiaImg,
         price: 8000,
         avgRating:4.6,
-        days:25,
+        days:12,
         reviews:[
           {
             name: "Reema",
@@ -30,7 +30,7 @@ const placesArray = [
         imageUrl: dubaiImg,
         price: 4000,
         avgRating:4.5,
-        days:20,
+        days:7,
         reviews:[
           {
             name: "Reema",
@@ -44,7 +44,7 @@ const placesArray = [
         imageUrl: greeceImg,
         price: 8000,
         avgRating:4.8,
-        days:25,
+        days:7,
         reviews:[
           {
             name: "Reema",
@@ -58,7 +58,7 @@ const placesArray = [
         imageUrl: indiaImg,
         price: 5000,
         avgRating:4.2,
-        days:12,
+        days:7,
         reviews:[
           {
             name: "Reema",
@@ -72,7 +72,7 @@ const placesArray = [
         imageUrl: japanImg,
         price: 6000,
         avgRating:4.9,
-        days:18,
+        days:13,
         reviews:[
           {
             name: "Reema",
@@ -86,7 +86,7 @@ const placesArray = [
         imageUrl: turkeyImg,
         price: 5000,
         avgRating:4.5,
-        days:22,
+        days:7,
         reviews:[
           {
             name: "Reema",

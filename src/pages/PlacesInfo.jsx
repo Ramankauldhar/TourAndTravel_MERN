@@ -9,6 +9,13 @@ import starIcon from '../Images/icons/star-fill.svg';
 import mapIcon from '../Images/icons/map-pin-line.png';
 import priceTagIcon from "../Images/icons/price-tag-fill.png";
 import daysIcon from "../Images/icons/calendar-fill.png";
+import temeratureColdIcon from '../Images/icons/temp-cold-fill.png';
+import temeratureHotIcon from '../Images/icons/temp-hot-line.png';
+import celsiusIcon from '../Images/icons/celsius-fill.png';
+import cloudIcon from '../Images/icons/cloud-fill.png';
+import minusIcon from '../Images/icons/indeterminate-circle-fill.png';
+import addIcon from '../Images/icons/add-circle-fill.png';
+import bagIcon from '../Images/icons/briefcase-4-fill.png';
 
 import AustraliaNewZealandTrip from '../tripsPages/AustraliaNewZealandTrip';
 import DubaiTrip from '../tripsPages/DubaiTrip';
@@ -60,6 +67,7 @@ const PlacesInfo = () => {
       </div>
       <div className='tripDayPlansContainer'>
           <div className='planContainer'>
+            <h2>Iternary Summery</h2>
             {tour === 'Australia and New Zealand Tour' && <AustraliaNewZealandTrip />}
             {tour === 'Dubai Tour' && <DubaiTrip />}
             {tour === 'Greece Tour' && <GreeceTrip />}
@@ -69,16 +77,14 @@ const PlacesInfo = () => {
           </div>
           <div className='extraInfoContainer'>
             <div>
-              <p className='titleText'>Temperature Guide</p>
+              <p className='titleText'><img src={cloudIcon} alt="temp in celsius icon" className='icon' /> Weather Guide</p>
               <ul>
-                  <li>Minimum Temperature: 15 Degree Celsius</li>
-                  <li>Max Temperature: 25 Degree Celsius</li>
+                  <li><img src={temeratureColdIcon} alt="minimum temperature icon" className='icon'/> Minimum Temperature: 15 Degree Celsius</li>
+                  <li><img src={temeratureHotIcon} alt="maximum temperature icon"  className='icon'/> Max Temperature: 25 Degree Celsius</li>
               </ul>
-              <i><strong>Note:</strong> You will be regularly notified in any of the changes in the temperature.</i><br/>
             </div>
-            <br/>
             <div>
-              <p  className='titleText'>Things Included in the Trip</p>
+              <p  className='titleText'><img src={addIcon} alt="add icon" className='icon'/> Things Included in the Trip</p>
               <ul>
                 <li>Stay at Hotel</li>
                 <li>Daily Breakfast, Lunch and Dinner</li>
@@ -95,7 +101,7 @@ const PlacesInfo = () => {
               </ul>
             </div>
             <div>
-              <p  className='titleText'>Things which are not Included</p>
+              <p  className='titleText'><img src={minusIcon} alt="minus icon" className='icon'/>Things which are not Included</p>
               <ul>
                 <li>Extra meal or drinks</li>
                 <li>Laundry</li>
@@ -111,7 +117,7 @@ const PlacesInfo = () => {
               </ul>
             </div>
             <div>
-              <p  className='titleText'>Suggested Things to Pack for this trip</p>
+              <p  className='titleText'><img src={bagIcon} alt="suitcase icon" className='icon'/> Suggested Things to Pack for this trip</p>
               <ul>
                 <li>Pack atleast 5 winter dresses</li>
                 <li>Pack atleast 5 summer dresses</li>
@@ -125,6 +131,7 @@ const PlacesInfo = () => {
                 <li>Keep some snacks in side bag</li>
                 <li>Pack a Spring Jacket for mild cold evenings</li>
                 <li>4 Shirts</li>
+                <i><strong>Note:</strong> You will be regularly notified in any of the changes in the plan.</i><br/>
               </ul>
             </div>
           </div>
