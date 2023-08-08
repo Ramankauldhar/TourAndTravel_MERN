@@ -35,7 +35,7 @@
 }
 .tourinfo div{
     width:33.33%;
-    margin: 0 10px;
+    margin: 5px 10px;
     padding: 10px;
     background-color: rgb(223, 239, 253);;
     border-radius: 20px;
@@ -47,6 +47,7 @@
     font-size: 25px;
     font-weight: 500;
     color: var(--primary-color);
+    margin-top: 20px;
 }
 .extraInfoContainer{
     background-color: rgb(223, 239, 253);
@@ -71,9 +72,37 @@
     background-color:rgb(223, 239, 253) ;
     color: var(--primary-color);
 }
+.formData{
+    text-align: center;
+}
+.rating span{
+    font-size: 1.5rem;
+    margin:10px;
+    align-items: center;
+    cursor:pointer;
+}
+.inputArea{
+    margin-top:5px;
+}
+.inputField{
+    width:450px;
+    margin-right: 10px;
+}
+.reviewsSection{
+    background-color: rgb(225, 222, 222);
+    padding:10px;
+    padding-bottom: 20px;
+}
+@media screen and (max-width: 1200px) {
+    .planContainer{
+        width:66%;
+    }
+    .extraInfoContainer{
+        width:35%;
+    }
+}
 
-
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
     .tripDayPlansContainer, .tourinfo{
         display: block;
     }

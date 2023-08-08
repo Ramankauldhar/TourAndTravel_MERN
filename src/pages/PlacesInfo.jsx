@@ -1,17 +1,16 @@
 import React from 'react';
 import '../styles/placesInfo.css';
-import {Form, ListGroup } from 'reactstrap';
+import {Form, Button } from 'reactstrap';
 import { useParams } from 'react-router-dom';
 import placesArray from '../TourData/placesArray';
 import calculateAvgRating from '../utils/avgRating';
+import Booking from '../components/Booking/Booking';
 
 import starIcon from '../Images/icons/star-fill.svg';
-import mapIcon from '../Images/icons/map-pin-line.png';
 import priceTagIcon from "../Images/icons/price-tag-fill.png";
 import daysIcon from "../Images/icons/calendar-fill.png";
 import temeratureColdIcon from '../Images/icons/temp-cold-fill.png';
 import temeratureHotIcon from '../Images/icons/temp-hot-line.png';
-import celsiusIcon from '../Images/icons/celsius-fill.png';
 import cloudIcon from '../Images/icons/cloud-fill.png';
 import minusIcon from '../Images/icons/indeterminate-circle-fill.png';
 import addIcon from '../Images/icons/add-circle-fill.png';
@@ -29,7 +28,7 @@ const PlacesInfo = () => {
   const {id} = useParams();
   //later API will be used
   const tourData = placesArray.find(place => place.id === id);
-  const {imageUrl, tour, desc, price, reviews, days} = tourData;
+  const {imageUrl, tour, price, reviews, days} = tourData;
 
   const {totalRating, avgRating} = calculateAvgRating(reviews)
 
@@ -76,6 +75,9 @@ const PlacesInfo = () => {
             {tour === 'Turkey Tour' && <TurkeyTrip />}
           </div>
           <div className='extraInfoContainer'>
+            <div>
+              <Booking tour = {tour} />
+            </div>
             <div>
               <p className='titleText'><img src={cloudIcon} alt="temp in celsius icon" className='icon' /> Weather Guide</p>
               <ul>
@@ -136,6 +138,26 @@ const PlacesInfo = () => {
             </div>
           </div>
       </div>    
+     </section>
+     <section className='reviewsSection'>
+      <div>
+        <h4>
+          Reviews ({reviews?.length} reviews)
+        </h4>
+        <Form className='formData'>
+          <div className='rating'>
+            <span>1<i class="ri-star-fill"></i></span>
+            <span>2<i class="ri-star-fill"></i></span>
+            <span>3<i class="ri-star-fill"></i></span>
+            <span>4<i class="ri-star-fill"></i></span>
+            <span>5<i class="ri-star-fill"></i></span>
+          </div>
+          <div className='inputArea'>
+            <input type="text" placeholder='Write your reviews about this trip' className='inputField'/>
+            <Button className='btn secondaryBtn'>Submit</Button>
+          </div>
+        </Form>
+      </div>
      </section>
     </>
   )

@@ -1,0 +1,38 @@
+.bookingContainer{
+    border: 1px solid lightgray;
+    border-radius: 20px;
+}
+#fullName, #contact, #date, #people{
+    width:100%;
+}
+.bookingHeader{
+    margin-top: 5px;
+    margin-left:2px;
+}
+.bookingIcon{
+    color: var(--primary-color);
+    font-size: 25px;
+}
+.bookingForm{
+    padding: 10px;
+}
+.bookingBottom {
+    padding: 10px;
+}
+.bookingBottom li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.bookingBottom li span{
+    font-size: 1rem;
+    font-weight: 500;
+}
+.bookBtn{
+    position:relative;
+    width:50%;
+    left:50%;
+    -ms-transform: translate(-50%);
+    transform: translate(-50%);
+    margin:10px;
+}
