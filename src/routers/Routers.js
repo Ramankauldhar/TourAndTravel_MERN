@@ -7,6 +7,7 @@ import Places from "./../pages/Places";
 import PlacesInfo from "./../pages/PlacesInfo";
 import Register from "./../pages/Register";
 import Search from "./../pages/Search";
+import FinalBooking from "./../pages/FinalBooking";
 
 import TurkeyTrip from "../tripsPages/TurkeyTrip";
 import IndiaTrip from "../tripsPages/IndiaTrip";
@@ -27,6 +28,7 @@ const Routers = () => {
       <Route path="/india" element={<IndiaTrip />} />
       <Route path="/dubai" element={<DubaiTrip />} />
       <Route path="/japan" element={<JapanSouthKoreaTrip />} />
+      <Route path="/finalPage" element={<FinalBooking />} />
     </Routes>
   );
 };

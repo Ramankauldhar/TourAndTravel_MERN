@@ -14,6 +14,7 @@ h2,h3,h4{
     text-align: center;
     padding: 10px;
 }
+
 /*Background Img section*/
 .backgroundImage, .backgroundVideo{
     width: 100%;
@@ -109,6 +110,7 @@ h2,h3,h4{
     padding: 10px;
     text-align: justify;
     justify-content:center;
+    animation-delay: 0.5s;
 }
 
 /*Search Section*/
@@ -165,6 +167,7 @@ h2,h3,h4{
 }
 .images:hover{
     transform: scale(1.1);
+    opacity:0.6;
 }
 .priceText{
     font-size: 22px;
@@ -314,6 +317,89 @@ h2,h3,h4{
     margin-left:10%;
     margin-right:10%;
 }
+
+/*Message Container*/
+.messageContainer{
+    position: relative;
+    top:10%;
+    height:400px;
+    width:800px;
+    padding:80px;
+    margin:auto;
+    padding:10px;
+    text-align: center;
+    color: var(--primary-color);
+    background-color: rgb(224, 224, 224);
+}
+.thankyouText{
+    padding:50px;
+    font-size: 25px;
+    font-weight: 600;
+    background-color: #96b6e0;
+}
+.bookBtn2{
+    position:absolute;
+    width:50%;
+    left:50%;
+    -ms-transform: translate(-50%);
+    transform: translate(-50%);
+    margin:10px;
+}
+
+/*Animations*/
+.animation {
+    position: relative;
+    opacity: 0.8;
+    transition: 4s;
+  }
+  
+  .animation.active {
+    opacity: 1;
+    animation: fadeBottom 4s linear;
+  }
+  .animation.fadeBottom {
+    animation: fadeBottom 4s linear;
+  }
+  .animation.fadeLeft {
+    animation: fadeLeft 4s linear;
+  }
+  .animation.fadeRight {
+    animation: fadeRight 4s linear;
+  }
+
+
+@keyframes fadeBottom {
+    0% {
+      transform: translateY(50px);
+      opacity: 0.8;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes fadeLeft {
+    0% {
+      transform: translateX(-100px);
+      opacity: 0.8;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeRight {
+    0% {
+      transform: translateX(100px);
+      opacity: 0.8;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
 @media only screen and (max-width: 1200px) {
     .cardContainer{
         width: 48%;

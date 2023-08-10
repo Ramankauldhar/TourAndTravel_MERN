@@ -1,5 +1,6 @@
 import React from 'react';
 import './../styles/home.css';
+import './../animationJs/animation.js';
 
 import SearchBar from '../shared/SearchBar';
 import ServiceList from '../services/ServiceList';
@@ -30,7 +31,7 @@ return <>
   </section>
   <h1>Travel Around The World With Us</h1>
 
-    <section className='firstSection'>
+    <section className='firstSection animation fadeBottom'>
           <div className="introSection">
             <div className="introContainer">
               <div class="textContainer">
@@ -65,13 +66,13 @@ return <>
           </div>
     </section>
 
-    <section className='searchSection'>
+    <section className='searchSection animation fadeBottom'>
       <div>
          <SearchBar/>
       </div>
     </section> 
 
-    <section className='tripsSection'>
+    <section className='tripsSection animation fadeLeft'>
       <div>
         <h2>Special Offers</h2>
            <div className="containerTop">
@@ -143,7 +144,7 @@ return <>
       </div>
     </section>
 
-    <section className='allTripsSection'>
+    <section className='allTripsSection animation fadeBottom'>
         <h3>All Trips</h3>
         <div className='tourListContainer'>
            <TourList/>
@@ -151,14 +152,14 @@ return <>
     </section>
     <br/>
 
-     <section>
+     <section className='animation fadeRight'>
             <h3 className='serviceTitle'>Our Services</h3>
             <div className='servicesContainer'>
                <ServiceList/>
             </div>
     </section>
 
-    <section>
+    <section className='animation fadeBottom'>
         <div className='experinceMainDiv'>
           <div className='experienceSection'>
            <div className='experienceContent'>
@@ -189,7 +190,7 @@ return <>
     </section>
     <br/>
   
-    <section>
+    <section className='animation fadeBottom'>
       <div className='gallerySection'>
         <h3>Gallery</h3>
         <div className='galleryContainer'>
@@ -198,7 +199,7 @@ return <>
       </div>
     </section>
 
-    <section className='testimonialSection'>
+    <section className='testimonialSection animation fadeBottom'>
       <h3>Check our feedbacks from other customers</h3>
       <div className='testimonialContainer'>
         <Testimonials/>
@@ -206,7 +207,7 @@ return <>
     </section>
     <br />
 
-    <section>
+    <section className='animation fadeLeft'>
       <div class="NewsSection">
         <NewsLetter/>
       </div>
