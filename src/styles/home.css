@@ -167,6 +167,7 @@ h2,h3,h4{
 }
 .images:hover{
     transform: scale(1.1);
+    transition: 1s ease-in-out;
     opacity:0.6;
 }
 .priceText{
@@ -349,7 +350,7 @@ h2,h3,h4{
 /*Animations*/
 .animation {
     position: relative;
-    opacity: 0.8;
+    opacity: 0.5;
     transition: 4s;
   }
   
@@ -371,7 +372,7 @@ h2,h3,h4{
 @keyframes fadeBottom {
     0% {
       transform: translateY(50px);
-      opacity: 0.8;
+      opacity: 0.5;
     }
     100% {
       transform: translateY(0);
@@ -381,7 +382,7 @@ h2,h3,h4{
   @keyframes fadeLeft {
     0% {
       transform: translateX(-100px);
-      opacity: 0.8;
+      opacity: 0.5;
     }
     100% {
       transform: translateX(0);
@@ -392,7 +393,7 @@ h2,h3,h4{
   @keyframes fadeRight {
     0% {
       transform: translateX(100px);
-      opacity: 0.8;
+      opacity: 0.5;
     }
     100% {
       transform: translateX(0);

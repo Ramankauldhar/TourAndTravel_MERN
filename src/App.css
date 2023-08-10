@@ -35,7 +35,6 @@ ul{
   padding: 0.5rem;
   color: white;
   margin-right: 10px;
-  transition: 0.8s;
 }
 
 .primaryBtn a {
@@ -49,7 +48,6 @@ ul{
   border: none;
   border-radius: 0px 20px ;
   margin-right:10px;
-  transition: 0.5s;
 }
 
 .secondaryBtn a {
@@ -59,7 +57,9 @@ ul{
 
 .primaryBtn:hover{
   border-radius: 0px 20px;
+  transition: 1s linear;
 }
 .secondaryBtn:hover{
   border-radius: 0px 20px ;
+  transition: 1s linear;
 }
