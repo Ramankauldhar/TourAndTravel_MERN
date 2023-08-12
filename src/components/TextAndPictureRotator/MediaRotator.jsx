@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import backgroundImg from '../../Images/backgroundImg.jpg';
+import backgroundImg from '../../Images/backgroundImg.jpeg';
 import backgroundImg2 from '../../Images/backgroundImg2.jpeg';
 import backgroundVideo from '../../Images/backgroundVideo.mp4';
 

@@ -7,6 +7,7 @@ import NewsLetter from '../shared/NewsLetter';
 import { Container, Row, Col } from 'reactstrap';
 
 import './../styles/places.css';
+import './../styles/home.css';
 
 const Places = () => {
 
@@ -22,12 +23,8 @@ const Places = () => {
 
   return (
     <>
-      <section>
-         <Container>
-            <Row> 
+      <section className='animation moveFromRight'>
               <h2 className='tripsHeading'>All Trips</h2>
-            </Row>
-          </Container>
        </section>
        <section className='SearhSection'>
           <Container>

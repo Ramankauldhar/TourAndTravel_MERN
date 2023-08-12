@@ -31,6 +31,7 @@ img{
 }
 .navBar_item a.active_link{
     color: var(--secondary-color);
+   
 }
 .navBarLeft{
     display: flex;

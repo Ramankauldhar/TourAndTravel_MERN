@@ -1,30 +1,36 @@
-*{
+* {
     box-sizing: border-box;
     padding: 0;
-    margin:0;
+    margin: 0;
 }
-h1{
+
+h1 {
     text-align: center;
     padding: 10px;
     background-color: #96b6e0;
     font-weight: 800;
 }
 
-h2,h3,h4{
+h2,
+h3,
+h4 {
     text-align: center;
     padding: 10px;
 }
 
+/*----------------------------------------------------------------------------*/
 /*Background Img section*/
-.backgroundImage, .backgroundVideo{
+.backgroundImage,
+.backgroundVideo {
     width: 100%;
-    height:700px;
+    height: 700px;
     background-attachment: fixed;
     position: relative;
     display: inline-block;
-    object-fit:fill;
+    object-fit: cover;
 }
-.textOnImages{
+
+.textOnImages {
     position: absolute;
     top: 15%;
     left: 50%;
@@ -32,44 +38,51 @@ h2,h3,h4{
     text-align: center;
     color: white;
 }
-.firstText{
+
+.firstText {
     font-size: 40px;
     font-weight: 400;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
-.secondText{
+
+.secondText {
     font-size: 30px;
 }
 
+/*----------------------------------------------------------------------------*/
 /*First Intro section*/
-.firstSection{
+.firstSection {
     position: relative;
-    margin-left:5%;
-    margin-right:5%;
-    margin-top:50px;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 50px;
 }
-.introSection{
+
+.introSection {
     max-width: 100%;
     height: auto;
     display: flex;
 }
-.introContainer{
-    width:38%;
+
+.introContainer {
+    width: 38%;
     font-size: large;
     padding-top: 10px;
 }
-.infoContainer{
+
+.infoContainer {
     display: flex;
-    width:62%;
+    width: 62%;
     flex-wrap: wrap;
-    justify-content:space-between;
+    justify-content: space-between;
     overflow: hidden;
-    margin-left:10px;
+    margin-left: 10px;
 }
-.card{
-    margin:10px;
-    max-width:320px;
-    min-width:100px;
+
+.card {
+    margin: 10px;
+    max-width: 320px;
+    min-width: 100px;
     color: var(--secondary-color);
     font-size: large;
     font-weight: 500;
@@ -81,73 +94,84 @@ h2,h3,h4{
     background-color: var(--primary-color);
 }
 
-.imagesInCard{
-    max-width:100%;
-    height:250px;
+.imagesInCard {
+    max-width: 100%;
+    height: 250px;
     transition: transform 0.3;
     object-fit: cover;
 }
-.cardPara{
-    padding:10px;
-    margin:auto;
+
+.cardPara {
+    padding: 10px;
+    margin: auto;
     color: var(--secondary-color);
     text-align: center;
 }
-.cardFooter{
+
+.cardFooter {
     background-color: var(--primary-color);
 }
-.textContainer{
-    margin-left:10px;
+
+.textContainer {
+    margin-left: 10px;
 }
-.hurryText{
+
+.hurryText {
     font-weight: 600;
     font-size: 25px;
     color: var(--secondary-color);
     text-shadow: 2px 2px var(--primary-color);
     text-align: center;
 }
-.travelingText{
+
+.travelingText {
     padding: 10px;
     text-align: justify;
-    justify-content:center;
+    justify-content: center;
     animation-delay: 0.5s;
 }
 
+/*----------------------------------------------------------------------------*/
 /*Search Section*/
-.searchSection{
-    margin-top:50px;
+.searchSection {
+    margin-top: 50px;
     margin-left: 10%;
-    margin-right:10%;
+    margin-right: 10%;
 }
 
-
+/*----------------------------------------------------------------------------*/
 /*Special Offers section*/
-.containerTop{
-    display:flex;
+.containerTop {
+    display: flex;
     flex-wrap: wrap;
     margin-left: 5%;
-    margin-right:5%;
+    margin-right: 5%;
     justify-content: space-between;
 }
-.cardContainer{
+
+.cardContainer {
     color: var(--primary-color);
-    background-color:#f3af1b;
-    margin:5px;
-    width:24%;
+    background-color: #f3af1b;
+    margin: 5px;
+    width: 24%;
     overflow: hidden;
 }
-.cardParaHeading{
+
+.cardParaHeading {
     font-size: large;
     font-weight: 600;
 }
-.MoreDetails{
+
+.MoreDetails {
     display: flex;
     justify-content: space-between;
 }
-.cardFooter2{
+
+.cardFooter2 {
     padding: 15px;
     text-align: center;
 }
+
 .imgContainer {
     width: 100%;
     height: 300px;
@@ -156,25 +180,29 @@ h2,h3,h4{
     transition: 0.4s ease-in-out;
     position: relative;
 }
-.images{
-    width:100%;
-    height:300px;
+
+.images {
+    width: 100%;
+    height: 300px;
     padding: 0;
     cursor: pointer;
     transition: 0.4s ease-in-out;
     object-fit: cover;
     position: relative;
 }
-.images:hover{
+
+.images:hover {
     transform: scale(1.1);
     transition: 1s ease-in-out;
-    opacity:0.6;
+    opacity: 0.6;
 }
-.priceText{
+
+.priceText {
     font-size: 22px;
     font-weight: 600;
 }
-.offerText{
+
+.offerText {
     position: absolute;
     top: 0;
     right: 0;
@@ -189,272 +217,401 @@ h2,h3,h4{
     padding: 10px;
 }
 
+/*----------------------------------------------------------------------------*/
 /* all trips section*/
 .tourListContainer {
     margin-left: 5%;
     margin-right: 5%;
 }
-.tripsSection{
+
+.tripsSection {
     margin-top: 50px;
 }
+
 .allTripsSection {
     margin-top: 50px;
 }
 
+/*----------------------------------------------------------------------------*/
+/*Gallery Section*/
+.gallerySection {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 50px;
+}
 
+.galleryContainer {
+    margin-top: 10px;
+}
+
+.masonryImages {
+    transition: 0.2s;
+}
+
+.masonryImages:hover {
+    transform: scale(1.1);
+}
+
+/*----------------------------------------------------------------------------*/
+/*Testimonial Container*/
+.testimonialSection {
+    margin-top: 50px;
+}
+
+.testimonialContainer {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.testimonialDiv {
+    display: flex;
+}
+
+.slider {
+    display: flex;
+}
+
+.peopleImg {
+    width: 6rem;
+    height: 6rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 50px;
+    margin: 15px;
+    padding: 0;
+}
+
+/*----------------------------------------------------------------------------*/
+/*NEWS letter section*/
+.NewsSection {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+/*----------------------------------------------------------------------------*/
+/*Message Container*/
+.messageContainer {
+    position: relative;
+    top: 10%;
+    height: 400px;
+    width: 800px;
+    padding: 80px;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+    color: var(--primary-color);
+    background-color: rgb(224, 224, 224);
+}
+
+.thankyouText {
+    padding: 50px;
+    font-size: 25px;
+    font-weight: 600;
+    background-color: #96b6e0;
+}
+
+.bookBtn2 {
+    position: absolute;
+    width: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%);
+    transform: translate(-50%);
+    margin: 10px;
+}
+
+/*----------------------------------------------------------------------------*/
 /*Our Services Section*/
-.servicesContainer{
+.servicesContainer {
     display: flex;
     flex-wrap: wrap;
     margin-left: 10%;
-    margin-right:10%;
+    margin-right: 10%;
     background-color: rgb(223, 239, 253);
     overflow: scroll;
     min-height: 250px;
 }
-.serviceTitle{
+
+.serviceTitle {
     display: flex;
     justify-content: center;
-    margin-top: 5%;
+    margin-top:50px;
     margin-left: 10%;
     margin-right: 10%;
-    padding:10px;
+    padding: 10px;
     background-color: var(--primary-color);
-    color:var(--text-Color);
+    color: var(--text-Color);
 }
 
+/*----------------------------------------------------------------------------*/
 /*Experience Section*/
 .experinceMainDiv {
     display: flex;
     text-align: center;
     margin-left: 10%;
     margin-right: 10%;
-    margin-top: 50px;
     border-top: 0.5px solid rgb(206, 206, 248);
     border-bottom: 0.5px solid rgb(206, 206, 248);
 }
-.expText{
+
+.expText {
     font-size: 18px;
     text-align: center;
 }
-.experienceSection{
-   width:60%;
+
+.experienceSection {
+    width: 60%;
 }
-.experienceContent{
-    justify-content:space-between;
+
+.experienceContent {
+    justify-content: space-between;
 }
-.counterWrapper{
+
+.counterWrapper {
     display: flex;
     margin: auto;
     width: 50%;
     padding: 10px;
     justify-content: space-between;
 }
-.counterBox p{
+
+.counterBox p {
     padding: 2px;
-    margin-top:10px;
+    margin-top: 10px;
 }
-.counterBox span{
+
+.counterBox span {
     margin: 5px;
-    padding:10px;
-    height:100px;
+    padding: 10px;
+    height: 100px;
     background: var(--secondary-color);
     color: white;
     font-size: 1.5rem;
-    font-weight:600;
+    font-weight: 600;
     border-radius: 10px 5px 10px 5px;
 }
 
-.expImgContainer{
-    width:40%;
+.expImgContainer {
+    width: 40%;
     margin-top: 50px;
     display: inline;
 }
-.expImg{
-    height:200px;
+
+.expImg {
+    height: 200px;
 }
 
-/*Gallery Section*/
-.gallerySection{
-    margin-left:10%;
-    margin-right:10%;
-    margin-top:50px;
-}
-.galleryContainer{
-    margin-top:10px;
-}
-.masonryImages{
-    transition: 0.2s;
-}
-.masonryImages:hover{
-    transform:scale(1.1);
-}
-
-/*Testimonial Container*/
-.testimonialSection{
-    margin-top: 50px;
-}
-.testimonialContainer{
-    margin-left:10%;
-    margin-right:10%;
-}
-.testimonialDiv{
-    display: flex;
-}
-.slider{
-    display: flex;
-}
-.peopleImg{
-    width: 6rem;
-    height: 6rem;
-    border: 1px solid var(--primary-color);
-    border-radius: 50px;
-    margin:15px;
-    padding:0;
-}
-
-/*NEWS letter section*/
-.NewsSection{
-    margin-left:10%;
-    margin-right:10%;
-}
-
-/*Message Container*/
-.messageContainer{
+/*----------------------------------------------------------------------------*/
+/* About and Contact Us page css */
+.BackgroundDiv, .contactusDiv{
     position: relative;
-    top:10%;
-    height:400px;
-    width:800px;
-    padding:80px;
+    background-color:#96b6e0 ;
+}
+.aboutBackgroundImage, .contactImage{
+    width: 100vw;
+    height:100vh;
+    object-fit:cover;
+}
+.textDiv{
+    position: absolute;
+    top:28%;
+    left:10%;
+    right:10%;
     margin:auto;
-    padding:10px;
-    text-align: center;
-    color: var(--primary-color);
-    background-color: rgb(224, 224, 224);
+    padding:20px;
+    background-color: white;
 }
-.thankyouText{
-    padding:50px;
-    font-size: 25px;
-    font-weight: 600;
-    background-color: #96b6e0;
-}
-.bookBtn2{
-    position:absolute;
-    width:50%;
-    left:50%;
-    -ms-transform: translate(-50%);
-    transform: translate(-50%);
-    margin:10px;
+.textDiv p{
+    justify-content:space-between;
 }
 
-/*Animations*/
-.animation {
+.contactusDiv{
     position: relative;
-    opacity: 0.5;
-    transition: 4s;
-  }
-  
-  .animation.active {
-    opacity: 1;
-    animation: fadeBottom 4s linear;
-  }
-  .animation.fadeBottom {
-    animation: fadeBottom 4s linear;
-  }
-  .animation.fadeLeft {
-    animation: fadeLeft 4s linear;
-  }
-  .animation.fadeRight {
-    animation: fadeRight 4s linear;
-  }
+}
+.planeImg{
+    position: absolute;
+    animation-name: runPlaneAnimation;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    transition: 2s;
+}
+.contactFormContainer{
+    display: flex;
+}
+.openingHoursDiv{
+    width: 30%;
+    border: 1px solid black;
+    margin-right:2px;
+    padding: 10px;
+}
+.bookingFormDiv{
+    width:70%;
+    border: 1px solid black;
+}
+.openingHoursDiv p{
+    font-weight: 500;
+    text-align: center;
+    padding: 0;
+    margin:0;
+}
+.openingHoursDiv span{
+    text-align: center;
+}
+.bookingForm input, textarea{
+    width:100%;
+    border-color: var(--secondary-color);
+}
 
 
-@keyframes fadeBottom {
-    0% {
-      transform: translateY(50px);
-      opacity: 0.5;
-    }
-    100% {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
-  @keyframes fadeLeft {
-    0% {
-      transform: translateX(-100px);
-      opacity: 0.5;
-    }
-    100% {
-      transform: translateX(0);
-      opacity: 1;
-    }
-  }
-  
-  @keyframes fadeRight {
-    0% {
-      transform: translateX(100px);
-      opacity: 0.5;
-    }
-    100% {
-      transform: translateX(0);
-      opacity: 1;
-    }
-  }
-
+/*----------------------------------------------------------------------------*/
+/*Media Quaries*/
 @media only screen and (max-width: 1200px) {
-    .cardContainer{
+    .cardContainer {
         width: 48%;
     }
 }
-@media only screen and (max-width: 1000px){
-    .introSection{
+
+@media only screen and (max-width: 1000px) {
+    .introSection {
         display: block;
     }
-    .introContainer, .infoContainer{
+
+    .introContainer,
+    .infoContainer {
         width: 100%;
     }
 }
 
 @media only screen and (max-width: 900px) {
-    .backgroundImage{
+
+    .backgroundImage,
+    .backgroundVideo {
         height: 350px;
+        width: 100%;
     }
+
+    .firstText {
+        font-size: 25px;
+    }
+
+    .secondText {
+        font-size: 15px;
+    }
+
     .imagesInCard {
         transform: scale(0.8);
-        padding:0;
-        margin:0;
+        padding: 0;
+        margin: 0;
     }
+
     .experinceMainDiv {
         display: block;
         margin-left: 5%;
         margin-right: 5%;
     }
-    .expImg{
+
+    .expImg {
         display: none;
     }
-    .experienceSection{
+    .planeImg{
+        height:40px;
+        width:40px;
+    }
+    .experienceSection {
+        width: 100%;
+    }
+    .contactFormContainer{
+        display: block;
+    }
+    .openingHoursDiv{
+        display: none;
+    }
+    .bookingFormDiv{
         width:100%;
     }
-    
+
 }
 
-@media only screen and (max-width: 580px){
-    .backgroundImage{
+@media only screen and (max-width: 580px) {
+    .backgroundImage {
         display: none;
     }
-    .card{
+
+    .card {
         display: block;
-        flex-direction:unset;
+        flex-direction: unset;
     }
-    .introSection{
+
+    .introSection {
         display: block;
     }
+
     .imagesInCard {
-        width:100%;
-        padding:0;
-        margin:0;
+        width: 100%;
+        padding: 0;
+        margin: 0;
     }
-    .cardContainer{
-        width:100%;
+
+    .cardContainer {
+        width: 100%;
     }
+}
+
+/*Animations*/
+.animation {
+    position: relative;
+    transition: 4s;
+}
+
+.animation .active {
+    animation: moveFromRight 2s linear;
+}
+
+.animation.fadeBottom {
+    animation: moveFromBottom 2s linear;
+}
+
+.animation.fadeLeft {
+    animation: moveFromLeft 2s linear;
+}
+
+.animation.fadeRight {
+    animation: fadeRight 2s linear;
+}
+
+
+@keyframes moveFromBottom {
+    0% {
+        transform: translateY(50px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes moveFromLeft {
+    0% {
+        transform: translateX(-100px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveFromRight {
+    0% {
+        transform: translateX(100px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes runPlaneAnimation {
+    0%   { left:0px; top:0px; }
+    25%  { left:25%; top:0px; }
+    50%  { left:50%; top:0px; }
+    75%  { left:75%; top:0px; }
+    100% { left:85%; top:0px; }
 }

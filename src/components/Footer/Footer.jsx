@@ -18,7 +18,7 @@ const quickLinks=[
     display:'Home'
   },
   {
-    path:"",
+    path:"/about",
     display:'About Us'
   },
   {
@@ -26,13 +26,13 @@ const quickLinks=[
     display:'Places To Visit'
   },
   {
-    path:"",
+    path:"/contactUs",
     display:'Contact Us'
   },
 ];
 const otherLinks=[
   {
-    path:"/gallery",
+    path:"#",
     display:'Gallery'
   },
   {
@@ -44,7 +44,7 @@ const otherLinks=[
     display:'Register'
   },
   {
-    path:"/feedbacks",
+    path:"#",
     display:"Feedbacks"
   }
 ]

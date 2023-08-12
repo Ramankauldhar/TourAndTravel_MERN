@@ -15,11 +15,11 @@ const navigation=[
     display:'All Trips'
   },
   {
-    path:"",
+    path:"/about",
     display:'About Us'
   },
   {
-    path:"",
+    path:"/contactUs",
     display:'Contact Us'
   },
 ]
@@ -46,8 +46,8 @@ function Header() {
            </div>
            <div className='navBarRight'>
              <div className='btns'> 
-                 <Button className='btn primaryBtn'><Link to='/login'>Login</Link></Button>
-                 <Button className='btn secondaryBtn'><Link to='/register'>Register</Link></Button>
+                 <Link to='/login'><Button className='btn primaryBtn'>Login</Button></Link>
+                 <Link to='/register'><Button className='btn secondaryBtn'>Register</Button></Link>
              </div>
              <span className='menuBar'>
                  <img src={menuIcon} alt='menubar' className="menuBarIcon"/>

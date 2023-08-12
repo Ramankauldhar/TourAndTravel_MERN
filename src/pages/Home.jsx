@@ -3,7 +3,6 @@ import './../styles/home.css';
 import './../animationJs/animation.js';
 
 import SearchBar from '../shared/SearchBar';
-import ServiceList from '../services/ServiceList';
 import TourList from '../components/toursList/TourList';
 import {Link} from "react-router-dom";
 import Gallery from '../components/Gallery/Gallery';
@@ -21,8 +20,6 @@ import dubaiImg from '../Images/dubai.jpg';
 import indiaImg from '../Images/india.jpg';
 import japanImg from '../Images/japan.jpg';
 import turkeyImg from '../Images/turkey.jpg';
-import experienceImg from '../Images/experience.png';
-
 
 const Home = () => {
 return <> 
@@ -31,7 +28,7 @@ return <>
   </section>
   <h1>Travel Around The World With Us</h1>
 
-    <section className='firstSection animation fadeBottom'>
+    <section className='firstSection animation moveFromBottom'>
           <div className="introSection">
             <div className="introContainer">
               <div class="textContainer">
@@ -66,13 +63,13 @@ return <>
           </div>
     </section>
 
-    <section className='searchSection animation fadeBottom'>
+    <section className='searchSection animation moveFromBottom'>
       <div>
          <SearchBar/>
       </div>
     </section> 
 
-    <section className='tripsSection animation fadeLeft'>
+    <section className='tripsSection animation moveFromLeft'>
       <div>
         <h2>Special Offers</h2>
            <div className="containerTop">
@@ -144,54 +141,16 @@ return <>
       </div>
     </section>
 
-    <section className='allTripsSection animation fadeBottom'>
+    <section className='allTripsSection animation moveFromBottom'>
         <h3>All Trips</h3>
         <div className='tourListContainer'>
            <TourList/>
         </div>
     </section>
     <br/>
-
-     <section className='animation fadeRight'>
-            <h3 className='serviceTitle'>Our Services</h3>
-            <div className='servicesContainer'>
-               <ServiceList/>
-            </div>
-    </section>
-
-    <section className='animation fadeBottom'>
-        <div className='experinceMainDiv'>
-          <div className='experienceSection'>
-           <div className='experienceContent'>
-              <h3>Our Experience</h3>
-              <p class="expText">We will help you to make your trip more enjoyable with our 20 years experience in the industry.
-               We are the most expeienced in the world. We value your money and time.
-               </p>
-            </div>
-            <div className='counterWrapper'>
-                <div className='counterBox'>
-                    <span>15K+</span>
-                    <p>Sucessful Trip</p>
-                </div>
-                <div className='counterBox'>
-                     <span>1K+</span>
-                     <p>Regular Clients</p>
-                </div>
-                <div className='counterBox'>
-                      <span>20+</span>
-                      <p>Year Experience</p>
-                </div>
-            </div>
-      </div>
-      <div className='expImgContainer'>
-        <img src={experienceImg} alt='travelexperience' className='expImg'/>
-      </div>
-    </div>
-    </section>
-    <br/>
   
-    <section className='animation fadeBottom'>
-      <div className='gallerySection'>
+    <section className='animation moveFromBottom'>
+      <div className='gallerySection' id='gallery'>
         <h3>Gallery</h3>
         <div className='galleryContainer'>
           <Gallery/>
@@ -199,7 +158,7 @@ return <>
       </div>
     </section>
 
-    <section className='testimonialSection animation fadeBottom'>
+    <section className='testimonialSection animation moveFromBottom'>
       <h3>Check our feedbacks from other customers</h3>
       <div className='testimonialContainer'>
         <Testimonials/>
