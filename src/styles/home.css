@@ -22,8 +22,8 @@ h4 {
 /*Background Img section*/
 .backgroundImage,
 .backgroundVideo {
-    width: 100%;
-    height: 700px;
+    width: 100vw;
+    height: 100vh;
     background-attachment: fixed;
     position: relative;
     display: inline-block;

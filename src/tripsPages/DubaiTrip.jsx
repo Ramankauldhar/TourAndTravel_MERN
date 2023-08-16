@@ -36,9 +36,9 @@ const DubaiTrip = () => {
 
 
   return(
-    <div class="timeline">
-        <div class="detailContainer left">
-          <div class="content">
+    <div className="timeline">
+        <div className="detailContainer left">
+          <div className="content">
             <button type="button" className="collapsible">Day1: Welcome to the Marriott Hotel</button>
             <div className="daysPlanText"> 
                <img src={MarriottImg} alt="Marriott" className="planImages"/>
@@ -51,8 +51,8 @@ const DubaiTrip = () => {
             </div>
           </div>
         </div>
-        <div class="detailContainer right">
-          <div class="content">
+        <div className="detailContainer right">
+          <div className="content">
             <button type="button" className="collapsible">Day2: Burj Khalifa</button>
             <div className="daysPlanText"> 
                <img src={burjKhailfaImg} alt="Sydney Opera House" className="planImages"/>
@@ -63,8 +63,8 @@ const DubaiTrip = () => {
             </div>
           </div>
         </div>
-        <div class="detailContainer left">
-          <div class="content">
+        <div className="detailContainer left">
+          <div className="content">
             <button type="button" className="collapsible">Day3: Dubai Miracle Garden</button>
             <div className="daysPlanText"> 
                <img src={dubaiGardenImg} alt="Bondi Beach" className="planImages"/>
@@ -75,8 +75,8 @@ const DubaiTrip = () => {
             </div>
           </div>
         </div>
-        <div class="detailContainer right">
-          <div class="content">
+        <div className="detailContainer right">
+          <div className="content">
             <button type="button" className="collapsible">Day4: Dubai underwater aquarium and Zoo</button>
             <div className="daysPlanText"> 
                <img src={dubaiAquariumImg } alt="Kongaroo Island" className="planImages"/>
@@ -87,8 +87,8 @@ const DubaiTrip = () => {
             </div>
           </div>
         </div>
-        <div class="detailContainer left">
-          <div class="content">
+        <div className="detailContainer left">
+          <div className="content">
             <button type="button" className="collapsible">Day5: Palm Jumeirah</button>
             <div className="daysPlanText"> 
                <img src={palmJumeirahImg} alt="Melbourne City" className="planImages"/>
@@ -99,8 +99,8 @@ const DubaiTrip = () => {
             </div>
           </div>
         </div>
-        <div class="detailContainer right">
-          <div class="content">
+        <div className="detailContainer right">
+          <div className="content">
             <button type="button" className="collapsible">Day6: Dubai Water Park</button>
             <div className="daysPlanText"> 
                <img src={dubaiWaterparkImg} alt="Daintree Rainforest" className="planImages"/>
@@ -111,8 +111,8 @@ const DubaiTrip = () => {
             </div>
           </div>
         </div>
-        <div class="detailContainer left">
-          <div class="content">
+        <div className="detailContainer left">
+          <div className="content">
             <button type="button" className="collapsible">Day7: Return</button>
             <div className="daysPlanText"> 
                <img src={returnImg} alt="Melbourne City" className="planImages"/>

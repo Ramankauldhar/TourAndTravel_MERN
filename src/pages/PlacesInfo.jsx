@@ -146,11 +146,11 @@ const PlacesInfo = () => {
         </h4>
         <Form className='formData'>
           <div className='rating'>
-            <span>1<i class="ri-star-fill"></i></span>
-            <span>2<i class="ri-star-fill"></i></span>
-            <span>3<i class="ri-star-fill"></i></span>
-            <span>4<i class="ri-star-fill"></i></span>
-            <span>5<i class="ri-star-fill"></i></span>
+            <span>1<i className="ri-star-fill"></i></span>
+            <span>2<i className="ri-star-fill"></i></span>
+            <span>3<i className="ri-star-fill"></i></span>
+            <span>4<i className="ri-star-fill"></i></span>
+            <span>5<i className="ri-star-fill"></i></span>
           </div>
           <div className='inputArea'>
             <input type="text" placeholder='Write your reviews about this trip' className='inputField'/>
@@ -163,4 +163,4 @@ const PlacesInfo = () => {
   )
 }
 
-export default PlacesInfo
+export default PlacesInfo;

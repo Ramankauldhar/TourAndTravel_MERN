@@ -37,9 +37,9 @@ const AustraliaNewZealandTrip = () => {
   
 
     return( 
-      <div class="timeline">
-        <div class="detailContainer left">
-          <div class="content">
+      <div className="timeline">
+        <div className="detailContainer left">
+          <div className="content">
             <button type="button" className="collapsible">Day1: Welcome to the Marriott Hotel</button>
             <div className="daysPlanText"> 
                <img src={MarriottImg} alt="Marriott" className="planImages"/>
@@ -52,8 +52,8 @@ const AustraliaNewZealandTrip = () => {
             </div>
           </div>
         </div>
-        <div class="detailContainer right">
-          <div class="content">
+        <div className="detailContainer right">
+          <div className="content">
             <button type="button" className="collapsible">Day2: Sydney Opera House Visit</button>
             <div className="daysPlanText"> 
                <img src={SydneyOperaHouseImg} alt="Sydney Opera House" className="planImages"/>
@@ -64,8 +64,8 @@ const AustraliaNewZealandTrip = () => {
             </div>
           </div>
         </div>
-        <div class="detailContainer left">
-          <div class="content">
+        <div className="detailContainer left">
+          <div className="content">
             <button type="button" className="collapsible">Day3: Bondi Beach Visit</button>
             <div className="daysPlanText"> 
                <img src={bondiBeachImg} alt="Bondi Beach" className="planImages"/>
@@ -76,8 +76,8 @@ const AustraliaNewZealandTrip = () => {
             </div>
           </div>
         </div>
-        <div class="detailContainer right">
-          <div class="content">
+        <div className="detailContainer right">
+          <div className="content">
             <button type="button" className="collapsible">Day4: Kangaroo Island</button>
             <div className="daysPlanText"> 
                <img src={kangarooislandImg} alt="Kongaroo Island" className="planImages"/>
@@ -88,8 +88,8 @@ const AustraliaNewZealandTrip = () => {
             </div>
           </div>
         </div>
-        <div class="detailContainer left">
-          <div class="content">
+        <div className="detailContainer left">
+          <div className="content">
             <button type="button" className="collapsible">Day5: Melbourne City</button>
             <div className="daysPlanText"> 
                <img src={MelbourneImg} alt="Melbourne City" className="planImages"/>
@@ -100,8 +100,8 @@ const AustraliaNewZealandTrip = () => {
             </div>
           </div>
         </div>
-        <div class="detailContainer right">
-          <div class="content">
+        <div className="detailContainer right">
+          <div className="content">
             <button type="button" className="collapsible">Day6: Daintree Rainforest</button>
             <div className="daysPlanText"> 
                <img src={DaintreeRainforestImg} alt="Daintree Rainforest" className="planImages"/>
@@ -112,8 +112,8 @@ const AustraliaNewZealandTrip = () => {
             </div>
           </div>
         </div>
-        <div class="detailContainer left">
-          <div class="content">
+        <div className="detailContainer left">
+          <div className="content">
             <button type="button" className="collapsible">Day7: Fly to New Zealand</button>
             <div className="daysPlanText"> 
                <img src={returnImg} alt="Melbourne City" className="planImages"/>
@@ -124,8 +124,8 @@ const AustraliaNewZealandTrip = () => {
             </div>
           </div>
         </div>
-        <div class="detailContainer right">
-          <div class="content">
+        <div className="detailContainer right">
+          <div className="content">
             <button type="button" className="collapsible">Day8: Queenstown Visit</button>
             <div className="daysPlanText"> 
                <img src={DaintreeRainforestImg} alt="Daintree Rainforest" className="planImages"/>
@@ -136,8 +136,8 @@ const AustraliaNewZealandTrip = () => {
             </div>
           </div>
         </div>
-        <div class="detailContainer left">
-          <div class="content">
+        <div className="detailContainer left">
+          <div className="content">
             <button type="button" className="collapsible">Day9: Auckland Visit</button>
             <div className="daysPlanText"> 
                <img src={cityPalaceImg} alt="Marriott" className="planImages"/>
@@ -150,8 +150,8 @@ const AustraliaNewZealandTrip = () => {
             </div>
           </div>
         </div>
-        <div class="detailContainer right">
-          <div class="content">
+        <div className="detailContainer right">
+          <div className="content">
             <button type="button" className="collapsible">Day10: Wellington Waterfront</button>
             <div className="daysPlanText"> 
                <img src={bondiBeachImg} alt="Sydney Opera House" className="planImages"/>
@@ -162,8 +162,8 @@ const AustraliaNewZealandTrip = () => {
             </div>
           </div>
         </div>
-        <div class="detailContainer left">
-          <div class="content">
+        <div className="detailContainer left">
+          <div className="content">
             <button type="button" className="collapsible">Day11: Rotorua Visit</button>
             <div className="daysPlanText"> 
                <img src={palmJumeirahImg} alt="Marriott" className="planImages"/>
@@ -176,8 +176,8 @@ const AustraliaNewZealandTrip = () => {
             </div>
           </div>
         </div>
-        <div class="detailContainer right">
-          <div class="content">
+        <div className="detailContainer right">
+          <div className="content">
             <button type="button" className="collapsible">Day12: Return </button>
             <div className="daysPlanText"> 
                <img src={returnImg} alt="Sydney Opera House" className="planImages"/>

@@ -15,7 +15,7 @@ const About = () => {
               <div className='experienceSection'>
                   <div className='experienceContent'>
                     <h2>About Us</h2>
-                    <p class="expText">We are master in making your trip fantastic. We are helping people to stay healthy and possitive during their travel journey as it is important to create good memories on beautiful places.
+                    <p className="expText">We are master in making your trip fantastic. We are helping people to stay healthy and possitive during their travel journey as it is important to create good memories on beautiful places.
                         We have 10,000 of people who took out great trip and their feedback can tell you their experince with us.
                         We value our customers as your travel journey becomes our responsibility to make it best with the best guide.
                     </p>

@@ -45,13 +45,13 @@ const Register = () => {
                 </div>
                 <Form>
                   <FormGroup>
-                    <i class="ri-user-fill frontIcon"></i><input type='text' placeholder='Enter your username here' id="userEmail" onChange={handleChange} required />
+                    <i className="ri-user-fill frontIcon"></i><input type='text' placeholder='Enter your username here' id="userName" onChange={handleChange} required />
                   </FormGroup>
                   <FormGroup>
-                    <i class="ri-mail-open-fill frontIcon"></i><input type='email' placeholder='Enter your email here' id="userEmail" onChange={handleChange} required />
+                    <i className="ri-mail-open-fill frontIcon"></i><input type='email' placeholder='Enter your email here' id="userEmail" onChange={handleChange} required />
                   </FormGroup>
                   <FormGroup>
-                    <i class="ri-lock-unlock-fill frontIcon"></i><input type='password' placeholder='Enter your password here' id="userPswd" onChange={handleChange} required />
+                    <i className="ri-lock-unlock-fill frontIcon"></i><input type='password' placeholder='Enter your password here' id="userPswd" onChange={handleChange} required />
                   </FormGroup>
                   <FormGroup>
                     <Button className='btn secondaryBtn' type='submit'>Register</Button>

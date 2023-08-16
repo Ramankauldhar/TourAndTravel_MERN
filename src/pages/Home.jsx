@@ -31,7 +31,7 @@ return <>
     <section className='firstSection animation moveFromBottom'>
           <div className="introSection">
             <div className="introContainer">
-              <div class="textContainer">
+              <div className="textContainer">
                 <TextRotator  />
               </div>
               <p className="travelingText"><b>Traveling</b> makes you happy especially when you travel with your lovedones. 
@@ -167,7 +167,7 @@ return <>
     <br />
 
     <section className='animation fadeLeft'>
-      <div class="NewsSection">
+      <div className="NewsSection">
         <NewsLetter/>
       </div>
     </section>

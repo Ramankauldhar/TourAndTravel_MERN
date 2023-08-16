@@ -35,7 +35,7 @@ const Booking = ({tour}) => {
   return (
     <div className='bookingContainer'>
       <div className='bookingHeader'>
-       <i class="ri-bookmark-fill bookingIcon"></i> <span className='titleText'>Booking Information</span>
+       <i className="ri-bookmark-fill bookingIcon"></i> <span className='titleText'>Booking Information</span>
         <Form className='bookingForm' onSubmit={handleClick}>
             <FormGroup>
                 <label>Full Name:</label><br/><input type='text' placeholder='Full Name' id="fullName" required onChange={handleChange}/>

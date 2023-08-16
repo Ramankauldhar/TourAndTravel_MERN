@@ -37,9 +37,9 @@ const IndiaTrip = () => {
 
 
     return(
-      <div class="timeline">
-        <div class="detailContainer left">
-          <div class="content">
+      <div className="timeline">
+        <div className="detailContainer left">
+          <div className="content">
             <button type="button" className="collapsible">Day1: Welcome to the Marriott Hotel</button>
             <div className="daysPlanText"> 
                <img src={MarriottImg} alt="Marriott" className="planImages"/>
@@ -52,8 +52,8 @@ const IndiaTrip = () => {
             </div>
           </div>
         </div>
-        <div class="detailContainer right">
-          <div class="content">
+        <div className="detailContainer right">
+          <div className="content">
             <button type="button" className="collapsible">Day2: Mehrangarh Fort</button>
             <div className="daysPlanText"> 
                <img src={MehrangarhFortImg} alt="Sydney Opera House" className="planImages"/>
@@ -64,8 +64,8 @@ const IndiaTrip = () => {
             </div>
           </div>
         </div>
-        <div class="detailContainer left">
-          <div class="content">
+        <div className="detailContainer left">
+          <div className="content">
             <button type="button" className="collapsible">Day3: Hawa Mahal</button>
             <div className="daysPlanText"> 
                <img src={hawaMahalImg } alt="Bondi Beach" className="planImages"/>
@@ -76,8 +76,8 @@ const IndiaTrip = () => {
             </div>
           </div>
         </div>
-        <div class="detailContainer right">
-          <div class="content">
+        <div className="detailContainer right">
+          <div className="content">
             <button type="button" className="collapsible">Day4: City Palace</button>
             <div className="daysPlanText"> 
                <img src={cityPalaceImg} alt="Kongaroo Island" className="planImages"/>
@@ -88,8 +88,8 @@ const IndiaTrip = () => {
             </div>
           </div>
         </div>
-        <div class="detailContainer left">
-          <div class="content">
+        <div className="detailContainer left">
+          <div className="content">
             <button type="button" className="collapsible">Day5: Amber Palace</button>
             <div className="daysPlanText"> 
                <img src={amberPalaceImg} alt="Melbourne City" className="planImages"/>
@@ -100,8 +100,8 @@ const IndiaTrip = () => {
             </div>
           </div>
         </div>
-        <div class="detailContainer right">
-          <div class="content">
+        <div className="detailContainer right">
+          <div className="content">
             <button type="button" className="collapsible">Day7: Return</button>
             <div className="daysPlanText"> 
                <img src={returnImg} alt="Melbourne City" className="planImages"/>
