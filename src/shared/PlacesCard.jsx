@@ -6,7 +6,7 @@ import calculateAvgRating from '../utils/avgRating';
 
 const PlacesCard = ({place}) => {
   const {
-        id,
+        _id,
         tour,
         imageUrl,
         price,
@@ -21,7 +21,7 @@ const PlacesCard = ({place}) => {
    <div className="mainContainer">
       <div className='offersContainer'>
         <div className='imgContainer'>
-            <Link to={`/places/${id}`}>
+            <Link to={`/places/${_id}`}>
               <img src={imageUrl} alt='tourplaces' className='images'/>
             </Link> 
             <span className='featuredText'>Featured</span>

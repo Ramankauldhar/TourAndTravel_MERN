@@ -1,8 +1,7 @@
-import React from 'react';
+import React, { useEffect, useRef, useState, useContext } from 'react';
 import '../styles/placesInfo.css';
-import {Form, Button } from 'reactstrap';
+import { Form, Button, ListGroup } from 'reactstrap';
 import { useParams } from 'react-router-dom';
-import placesArray from '../TourData/placesArray';
 import calculateAvgRating from '../utils/avgRating';
 import Booking from '../components/Booking/Booking';
 
@@ -23,48 +22,97 @@ import IndiaTrip from '../tripsPages/IndiaTrip';
 import JapanSouthKoreaTrip from '../tripsPages/JapanSouthKoreaTrip';
 import TurkeyTrip from '../tripsPages/TurkeyTrip';
 
+import FetchData from '../hooks/FetchData';
+import { BASE_URL } from '../utils/connConfig';
+import { Auth } from '../userAuth/Auth';
+
 const PlacesInfo = () => {
 
-  const {id} = useParams();
-  //later API will be used
-  const tourData = placesArray.find(place => place.id === id);
-  const {imageUrl, tour, price, reviews, days} = tourData;
+  const { id } = useParams();
+  const reviewMsgRef = useRef("");
+  const [tourRating, setTourRating] = useState(null);
+  const { user } = useContext(Auth);
 
-  const {totalRating, avgRating} = calculateAvgRating(reviews)
+  // API to fetch the particular tour's details
+  const { data: tourData, loading, error } = FetchData(`${BASE_URL}/tours/${id}`)
+  const { imageUrl, tour, price, reviews, days } = tourData;
+
+  const { totalRating, avgRating } = calculateAvgRating(reviews);
+
+  const options = { day: "numeric", month: "long", year: "numeric" };
+
+  const submitHandler = async e => {
+    e.preventDefault();
+    const reviewText = reviewMsgRef.current.value;
+
+
+    try {
+      if (!user || user === undefined || user === null) {
+        alert('Please Login First!');
+      }
+
+      const reviewObj = {
+        userName: user?.userName,
+        reviewText,
+        rating: tourRating
+      }
+
+      const response = await fetch(`${BASE_URL}/review/${id}`, {
+        method: 'post',
+        headers: {
+          'content-type': 'application/json'
+        },
+        credentials: 'include',
+        body: JSON.stringify(reviewObj)
+      });
+      const result = await response.json();
+      if (!response.ok) {
+        alert(result.message);
+      }
+      alert('Review Submitted');
+    }
+    catch (error) {
+      alert(error.message);
+    }
+  };
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [tour]);
 
   return (
     <>
-     <section>
-      <div className='toursContainer'>
-            <div className='tourContent'>
-              <img src={imageUrl} alt="placeImg" className='tourImages' />
-              <h2 className='tourName'>{tour}</h2>
-              <h3>Tour Details</h3>
-              <div className='tourinfo'>
-                <div>
-                    <p className='cardHeading'>Rating</p>
-                    <p className='rating'>
-                      <img src={starIcon} alt=' star rating icon' className='icon'/>
-                      {calculateAvgRating === 0 ? null : avgRating}
-                      {totalRating === 0 ? (
-                        "Not Rated"
-                      ):(
-                      <span>({reviews?.length})</span>
-                       )}
-                    </p>
-                </div>
-                <div>
-                    <p className='cardHeading'>Price/person</p>
-                    <p><img src={priceTagIcon} alt='price tag' className='icon'/>${price}</p>
-                </div>
-                <div>
-                    <p className='cardHeading'>Days</p>
-                    <p><img src={daysIcon} alt="days tag" className='icon'/> {days}</p>
-                </div>
+      <section>
+        <div className='toursContainer'>
+          <div className='tourContent'>
+            <img src={imageUrl} alt="placeImg" className='tourImages' />
+            <h2 className='tourName'>{tour}</h2>
+            <h3>Tour Details</h3>
+            <div className='tourinfo'>
+              <div>
+                <p className='cardHeading'>Rating</p>
+                <p className='rating'>
+                  <img src={starIcon} alt=' star rating icon' className='icon' />
+                  {calculateAvgRating === 0 ? null : avgRating}
+                  {totalRating === 0 ? (
+                    "Not Rated"
+                  ) : (
+                    <span>({reviews?.length})</span>
+                  )}
+                </p>
+              </div>
+              <div>
+                <p className='cardHeading'>Price/person</p>
+                <p><img src={priceTagIcon} alt='price tag' className='icon' />${price}</p>
+              </div>
+              <div>
+                <p className='cardHeading'>Days</p>
+                <p><img src={daysIcon} alt="days tag" className='icon' /> {days}</p>
               </div>
             </div>
-      </div>
-      <div className='tripDayPlansContainer'>
+          </div>
+        </div>
+        <div className='tripDayPlansContainer'>
           <div className='planContainer'>
             <h2>Iternary Summery</h2>
             {tour === 'Australia and New Zealand Tour' && <AustraliaNewZealandTrip />}
@@ -76,17 +124,17 @@ const PlacesInfo = () => {
           </div>
           <div className='extraInfoContainer'>
             <div>
-              <Booking tour = {tour} />
+              <Booking tour={id} />
             </div>
             <div>
               <p className='titleText'><img src={cloudIcon} alt="temp in celsius icon" className='icon' /> Weather Guide</p>
               <ul>
-                  <li><img src={temeratureColdIcon} alt="minimum temperature icon" className='icon'/> Minimum Temperature: 15 Degree Celsius</li>
-                  <li><img src={temeratureHotIcon} alt="maximum temperature icon"  className='icon'/> Max Temperature: 25 Degree Celsius</li>
+                <li><img src={temeratureColdIcon} alt="minimum temperature icon" className='icon' /> Minimum Temperature: 15 Degree Celsius</li>
+                <li><img src={temeratureHotIcon} alt="maximum temperature icon" className='icon' /> Max Temperature: 25 Degree Celsius</li>
               </ul>
             </div>
             <div>
-              <p  className='titleText'><img src={addIcon} alt="add icon" className='icon'/> Things Included in the Trip</p>
+              <p className='titleText'><img src={addIcon} alt="add icon" className='icon' /> Things Included in the Trip</p>
               <ul>
                 <li>Stay at Hotel</li>
                 <li>Daily Breakfast, Lunch and Dinner</li>
@@ -103,7 +151,7 @@ const PlacesInfo = () => {
               </ul>
             </div>
             <div>
-              <p  className='titleText'><img src={minusIcon} alt="minus icon" className='icon'/>Things which are not Included</p>
+              <p className='titleText'><img src={minusIcon} alt="minus icon" className='icon' />Things which are not Included</p>
               <ul>
                 <li>Extra meal or drinks</li>
                 <li>Laundry</li>
@@ -119,7 +167,7 @@ const PlacesInfo = () => {
               </ul>
             </div>
             <div>
-              <p  className='titleText'><img src={bagIcon} alt="suitcase icon" className='icon'/> Suggested Things to Pack for this trip</p>
+              <p className='titleText'><img src={bagIcon} alt="suitcase icon" className='icon' /> Suggested Things to Pack for this trip</p>
               <ul>
                 <li>Pack atleast 5 winter dresses</li>
                 <li>Pack atleast 5 summer dresses</li>
@@ -133,32 +181,48 @@ const PlacesInfo = () => {
                 <li>Keep some snacks in side bag</li>
                 <li>Pack a Spring Jacket for mild cold evenings</li>
                 <li>4 Shirts</li>
-                <i><strong>Note:</strong> You will be regularly notified in any of the changes in the plan.</i><br/>
+                <i><strong>Note:</strong> You will be regularly notified in any of the changes in the plan.</i><br />
               </ul>
             </div>
           </div>
-      </div>    
-     </section>
-     <section className='reviewsSection'>
-      <div>
-        <h4>
-          Reviews ({reviews?.length} reviews)
-        </h4>
-        <Form className='formData'>
-          <div className='rating'>
-            <span>1<i className="ri-star-fill"></i></span>
-            <span>2<i className="ri-star-fill"></i></span>
-            <span>3<i className="ri-star-fill"></i></span>
-            <span>4<i className="ri-star-fill"></i></span>
-            <span>5<i className="ri-star-fill"></i></span>
-          </div>
-          <div className='inputArea'>
-            <input type="text" placeholder='Write your reviews about this trip' className='inputField'/>
-            <Button className='btn secondaryBtn'>Submit</Button>
-          </div>
-        </Form>
-      </div>
-     </section>
+        </div>
+      </section>
+      <section className='reviewsSection'>
+        <div>
+          <h4>
+            Reviews ({reviews?.length} reviews)
+          </h4>
+          <Form className='formData'>
+            <div className='rating'>
+              <span>1<i class="ri-star-fill"></i></span>
+              <span>2<i class="ri-star-fill"></i></span>
+              <span>3<i class="ri-star-fill"></i></span>
+              <span>4<i class="ri-star-fill"></i></span>
+              <span>5<i class="ri-star-fill"></i></span>
+            </div>
+            <div className='inputArea'>
+              <input type="text" placeholder='Write your reviews about this trip' className='inputField' />
+              <Button className='btn secondaryBtn'>Submit</Button>
+            </div>
+          </Form>
+          <ListGroup className="userRview">
+            {reviews?.map(review => (
+              <div>
+                <img />
+                <div className='reviewContent'>
+                  <div>
+                    <div>
+                      <h5>{review.userName}</h5>
+                      <p>{new Date()}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))
+            }
+          </ListGroup>
+        </div>
+      </section>
     </>
   )
 }
