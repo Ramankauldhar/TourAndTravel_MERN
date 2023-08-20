@@ -511,6 +511,9 @@ h4 {
     .expImg {
         display: none;
     }
+    .counterBox{
+        width:100%;
+    }
     .planeImg{
         height:40px;
         width:40px;

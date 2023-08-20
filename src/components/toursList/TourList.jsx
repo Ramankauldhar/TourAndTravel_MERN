@@ -1,15 +1,27 @@
 import React from 'react';
-import PlacesCard from "./../../shared/PlacesCard";
 import './../../shared/Places.css';
-import placesArray from "../../TourData/placesArray";
+import PlacesCard from "./../../shared/PlacesCard";
+
+import FetchData from '../../hooks/FetchData';
+import { BASE_URL } from '../../utils/connConfig';
 
 const TourList = () => {
+  const { data: allTours, loading, error } = FetchData(`${BASE_URL}/tours`);
+  console.log(allTours);
+
   return (
     <>
-     <div className="mainContainer">
+      {
+        loading && <h6>Loading ...</h6>
+      }
+      {
+        error && <h6>{error}</h6>
+      }
+      <div className="mainContainer">
         {
-          placesArray?.map(place => (
-            <div key={place.id} className="placeContainer">
+          !loading && !error &&
+          allTours?.map(place => (
+            <div key={place._id} className="placeContainer">
               <PlacesCard place={place} />
             </div>
           ))
