@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import '../styles/loginRegister.css';
 
 import { Container, Row, Col, Form, FormGroup, Button } from 'reactstrap';
@@ -8,14 +8,18 @@ import { useNavigate } from 'react-router-dom';
 import loginImg from '../Images/login.jpeg';
 import userIcon from '../Images/userIcon.png';
 
-const Login = () => {
+import { BASE_URL } from '../utils/connConfig';
+import { Auth } from '../userAuth/Auth';
 
-  const navigate = useNavigate();
+const Login = () => {
 
   const [credentials, setCredentials] = useState({
     userEmail: undefined,
-    userPswd: undefined
-  })
+    pswd: undefined
+  });
+
+  const navigate = useNavigate();
+  const { dispatch } = useContext(Auth);
 
   const handleChange = e => {
     setCredentials(prev => (
@@ -24,9 +28,28 @@ const Login = () => {
       }
     ))
   };
-  const handleClick = e => {
+  const handleClick = async e => {
     e.preventDefault();
-    navigate("/home");
+
+    dispatch({ type: 'LOGIN_START' });
+    try {
+      const response = await fetch(`${BASE_URL}/auth/login`, {
+        method: 'post',
+        headers: {
+          'content-type': 'application/json',
+        },
+        credentials: 'include',
+        body: JSON.stringify(credentials),
+      });
+      const result = await response.json();
+      if (!response.ok) alert(result.message);
+
+      dispatch({ type: 'LOGIN_SUCCESS', payload: result.data })
+      navigate('/')
+    }
+    catch (error) {
+      dispatch({ type: 'LOGIN_FAIL', payload: error.message })
+    }
   }
 
   return (
@@ -45,10 +68,10 @@ const Login = () => {
                 </div>
                 <Form onSubmit={handleClick}>
                   <FormGroup>
-                    <i className="ri-mail-open-fill frontIcon"></i><input type='email' placeholder='Enter your email here' id="userEmail" onChange={handleChange} required />
+                    <i class="ri-mail-open-fill frontIcon"></i><input type='email' placeholder='Enter your email here' id="userEmail" onChange={handleChange} required />
                   </FormGroup>
                   <FormGroup>
-                    <i className="ri-lock-unlock-fill frontIcon"></i><input type='password' placeholder='Enter your password here' id="userPswd" onChange={handleChange} required />
+                    <i class="ri-lock-unlock-fill frontIcon"></i><input type='password' placeholder='Enter your password here' id="pswd" onChange={handleChange} required />
                   </FormGroup>
                   <FormGroup>
                     <Button className='btn secondaryBtn' type='submit'>Login</Button>

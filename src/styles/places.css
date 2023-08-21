@@ -1,7 +1,7 @@
 .tripsHeading{
     background-image: url("../Images/backgroundPlaces.jpeg");
-    height: 400px;
-    width:100%;
+    height: 100vh;
+    width:100vw;
     background-size: cover;
     margin:0;
     padding:0;

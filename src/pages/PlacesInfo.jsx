@@ -22,6 +22,8 @@ import IndiaTrip from '../tripsPages/IndiaTrip';
 import JapanSouthKoreaTrip from '../tripsPages/JapanSouthKoreaTrip';
 import TurkeyTrip from '../tripsPages/TurkeyTrip';
 
+import AvatarImg from '../Images/avatar.png';
+
 import FetchData from '../hooks/FetchData';
 import { BASE_URL } from '../utils/connConfig';
 import { Auth } from '../userAuth/Auth';
@@ -34,7 +36,7 @@ const PlacesInfo = () => {
   const { user } = useContext(Auth);
 
   // API to fetch the particular tour's details
-  const { data: tourData, loading, error } = FetchData(`${BASE_URL}/tours/${id}`)
+  const { data: tourData} = FetchData(`${BASE_URL}/tours/${id}`)
   const { imageUrl, tour, price, reviews, days } = tourData;
 
   const { totalRating, avgRating } = calculateAvgRating(reviews);
@@ -44,7 +46,6 @@ const PlacesInfo = () => {
   const submitHandler = async e => {
     e.preventDefault();
     const reviewText = reviewMsgRef.current.value;
-
 
     try {
       if (!user || user === undefined || user === null) {
@@ -192,23 +193,23 @@ const PlacesInfo = () => {
           <h4>
             Reviews ({reviews?.length} reviews)
           </h4>
-          <Form className='formData'>
+          <Form onSubmit={submitHandler} className='formData'>
             <div className='rating'>
-              <span>1<i class="ri-star-fill"></i></span>
-              <span>2<i class="ri-star-fill"></i></span>
-              <span>3<i class="ri-star-fill"></i></span>
-              <span>4<i class="ri-star-fill"></i></span>
-              <span>5<i class="ri-star-fill"></i></span>
+              <span onClick={() => setTourRating(1)}>1<i class="ri-star-fill"></i></span>
+              <span onClick={() => setTourRating(2)}>2<i class="ri-star-fill"></i></span>
+              <span onClick={() => setTourRating(3)}>3<i class="ri-star-fill"></i></span>
+              <span onClick={() => setTourRating(4)}>4<i class="ri-star-fill"></i></span>
+              <span onClick={() => setTourRating(5)}>5<i class="ri-star-fill"></i></span>
             </div>
             <div className='inputArea'>
-              <input type="text" placeholder='Write your reviews about this trip' className='inputField' />
+              <input type="text" placeholder='Write your reviews about this trip' ref={reviewMsgRef} required className='inputField' />
               <Button className='btn secondaryBtn'>Submit</Button>
             </div>
           </Form>
           <ListGroup className="userRview">
             {reviews?.map(review => (
               <div>
-                <img />
+                <img src={AvatarImg} alt="user"/>
                 <div className='reviewContent'>
                   <div>
                     <div>
