@@ -15,7 +15,7 @@ const PlacesCard = ({place}) => {
        } = place;
 
   const {totalRating, 
-          avgRating} = calculateAvgRating(reviews);     
+          avgRating} = calculateAvgRating(reviews);    
 
   return (
    <div className="mainContainer">

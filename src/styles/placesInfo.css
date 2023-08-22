@@ -93,6 +93,13 @@
     padding:10px;
     padding-bottom: 20px;
 }
+.starIcon{
+    height: 30px;
+}
+.reviewContent{
+    display:flex;
+}
+
 @media screen and (max-width: 1200px) {
     .planContainer{
         width:66%;

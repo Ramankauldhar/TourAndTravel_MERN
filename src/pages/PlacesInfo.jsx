@@ -191,7 +191,7 @@ const PlacesInfo = () => {
       <section className='reviewsSection'>
         <div>
           <h4>
-            Reviews ({reviews?.length} reviews)
+            Add your feedback here
           </h4>
           <Form onSubmit={submitHandler} className='formData'>
             <div className='rating'>
@@ -206,17 +206,31 @@ const PlacesInfo = () => {
               <Button className='btn secondaryBtn'>Submit</Button>
             </div>
           </Form>
+          <h5>
+            Reviews ({reviews?.length})
+          </h5>
+          <hr/>
           <ListGroup className="userRview">
             {reviews?.map(review => (
               <div>
-                <img src={AvatarImg} alt="user"/>
-                <div className='reviewContent'>
-                  <div>
+                <div className='reviewContainer'>
+                  <div className="reviewContent">
+                    <div>
+                      <img src={AvatarImg} alt="user"/>
+                    </div>
                     <div>
                       <h5>{review.userName}</h5>
-                      <p>{new Date()}</p>
+                      <div className='starRating'>
+                          {Array.from({ length: review.rating }).map((_, index) => (
+                             <img key={index} src={starIcon} alt='star rating icon' className='starIcon' />
+                           ))}
+                           <span>({review.rating}/5)</span>
+                      </div>
+                      <p>{review.reviewText}</p>
+                      <p>{review.createdAt}</p>
                     </div>
                   </div>
+                  <hr/>
                 </div>
               </div>
             ))
