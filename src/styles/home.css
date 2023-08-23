@@ -286,6 +286,7 @@ h4 {
     margin-left: 10%;
     margin-right: 10%;
 }
+
 /*----------------------------------------------------------------------------*/
 /*Message Container*/
 .messageContainer {
@@ -332,7 +333,7 @@ h4 {
 .serviceTitle {
     display: flex;
     justify-content: center;
-    margin-top:50px;
+    margin-top: 50px;
     margin-left: 10%;
     margin-right: 10%;
     padding: 10px;
@@ -400,32 +401,38 @@ h4 {
 
 /*----------------------------------------------------------------------------*/
 /* About and Contact Us page css */
-.BackgroundDiv, .contactusDiv{
+.BackgroundDiv,
+.contactusDiv {
     position: relative;
-    background-color:#96b6e0 ;
-}
-.aboutBackgroundImage, .contactImage{
-    width: 100vw;
-    height:100vh;
-    object-fit:cover;
-}
-.textDiv{
-    position: absolute;
-    top:28%;
-    left:10%;
-    right:10%;
-    margin:auto;
-    padding:20px;
-    background-color: white;
-}
-.textDiv p{
-    justify-content:space-between;
+    background-color: #96b6e0;
 }
 
-.contactusDiv{
+.aboutBackgroundImage,
+.contactImage {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.textDiv {
+    position: absolute;
+    top: 28%;
+    left: 10%;
+    right: 10%;
+    margin: auto;
+    padding: 20px;
+    background-color: white;
+}
+
+.textDiv p {
+    justify-content: space-between;
+}
+
+.contactusDiv {
     position: relative;
 }
-.planeImg{
+
+.planeImg {
     position: absolute;
     animation-name: runPlaneAnimation;
     animation-duration: 2s;
@@ -433,30 +440,37 @@ h4 {
     animation-fill-mode: forwards;
     transition: 2s;
 }
-.contactFormContainer{
+
+.contactFormContainer {
     display: flex;
 }
-.openingHoursDiv{
+
+.openingHoursDiv {
     width: 30%;
     border: 1px solid black;
-    margin-right:2px;
+    margin-right: 2px;
     padding: 10px;
 }
-.bookingFormDiv{
-    width:70%;
+
+.bookingFormDiv {
+    width: 70%;
     border: 1px solid black;
 }
-.openingHoursDiv p{
+
+.openingHoursDiv p {
     font-weight: 500;
     text-align: center;
     padding: 0;
-    margin:0;
+    margin: 0;
 }
-.openingHoursDiv span{
+
+.openingHoursDiv span {
     text-align: center;
 }
-.bookingForm input, textarea{
-    width:100%;
+
+.bookingForm input,
+textarea {
+    width: 100%;
     border-color: var(--secondary-color);
 }
 
@@ -511,24 +525,30 @@ h4 {
     .expImg {
         display: none;
     }
-    .counterBox{
-        width:100%;
+
+    .counterBox {
+        width: 100%;
     }
-    .planeImg{
-        height:40px;
-        width:40px;
+
+    .planeImg {
+        height: 40px;
+        width: 40px;
     }
+
     .experienceSection {
         width: 100%;
     }
-    .contactFormContainer{
+
+    .contactFormContainer {
         display: block;
     }
-    .openingHoursDiv{
+
+    .openingHoursDiv {
         display: none;
     }
-    .bookingFormDiv{
-        width:100%;
+
+    .bookingFormDiv {
+        width: 100%;
     }
 
 }
@@ -612,9 +632,28 @@ h4 {
 }
 
 @keyframes runPlaneAnimation {
-    0%   { left:0px; top:0px; }
-    25%  { left:25%; top:0px; }
-    50%  { left:50%; top:0px; }
-    75%  { left:75%; top:0px; }
-    100% { left:85%; top:0px; }
+    0% {
+        left: 0px;
+        top: 0px;
+    }
+
+    25% {
+        left: 25%;
+        top: 0px;
+    }
+
+    50% {
+        left: 50%;
+        top: 0px;
+    }
+
+    75% {
+        left: 75%;
+        top: 0px;
+    }
+
+    100% {
+        left: 85%;
+        top: 0px;
+    }
 }

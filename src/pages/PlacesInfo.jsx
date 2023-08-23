@@ -32,11 +32,12 @@ const PlacesInfo = () => {
 
   const { id } = useParams();
   const reviewMsgRef = useRef("");
+  const [review, setReviews] = useState([]);
   const [tourRating, setTourRating] = useState(null);
   const { user } = useContext(Auth);
 
   // API to fetch the particular tour's details
-  const { data: tourData} = FetchData(`${BASE_URL}/tours/${id}`)
+  const { data: tourData } = FetchData(`${BASE_URL}/tours/${id}`)
   const { imageUrl, tour, price, reviews, days } = tourData;
 
   const { totalRating, avgRating } = calculateAvgRating(reviews);
@@ -58,7 +59,7 @@ const PlacesInfo = () => {
         rating: tourRating
       }
 
-      const response = await fetch(`${BASE_URL}/review/${id}`, {
+      const response = await fetch(`${BASE_URL}/reviews/${id}`, {
         method: 'post',
         headers: {
           'content-type': 'application/json'
@@ -67,10 +68,11 @@ const PlacesInfo = () => {
         body: JSON.stringify(reviewObj)
       });
       const result = await response.json();
-      if (!response.ok) {
-        alert(result.message);
-      }
-      alert('Review Submitted');
+      alert(result.message);
+      //update reviews state to show the new review that the user added
+      setReviews([...reviews, reviewObj]);
+      //Clear the input field
+      reviewMsgRef.current.value = '';
     }
     catch (error) {
       alert(error.message);
@@ -125,7 +127,7 @@ const PlacesInfo = () => {
           </div>
           <div className='extraInfoContainer'>
             <div>
-              <Booking tour={id} />
+              <Booking tourData={tourData} />
             </div>
             <div>
               <p className='titleText'><img src={cloudIcon} alt="temp in celsius icon" className='icon' /> Weather Guide</p>
@@ -209,28 +211,28 @@ const PlacesInfo = () => {
           <h5>
             Reviews ({reviews?.length})
           </h5>
-          <hr/>
+          <hr />
           <ListGroup className="userRview">
             {reviews?.map(review => (
               <div>
                 <div className='reviewContainer'>
                   <div className="reviewContent">
                     <div>
-                      <img src={AvatarImg} alt="user"/>
+                      <img src={AvatarImg} alt="user" />
                     </div>
                     <div>
                       <h5>{review.userName}</h5>
                       <div className='starRating'>
-                          {Array.from({ length: review.rating }).map((_, index) => (
-                             <img key={index} src={starIcon} alt='star rating icon' className='starIcon' />
-                           ))}
-                           <span>({review.rating}/5)</span>
+                        {Array.from({ length: review.rating }).map((_, index) => (
+                          <img key={index} src={starIcon} alt='star rating icon' className='starIcon' />
+                        ))}
+                        <span>({review.rating}/5)</span>
                       </div>
                       <p>{review.reviewText}</p>
-                      <p>{review.createdAt}</p>
+                      <p>{new Date(review.createdAt).toLocaleDateString("en-Us", options)}</p>
                     </div>
                   </div>
-                  <hr/>
+                  <hr />
                 </div>
               </div>
             ))
