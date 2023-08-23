@@ -50,7 +50,7 @@ const PlacesInfo = () => {
 
     try {
       if (!user || user === undefined || user === null) {
-        alert('Please Login First!');
+        return alert('Please Login First!');
       }
 
       const reviewObj = {

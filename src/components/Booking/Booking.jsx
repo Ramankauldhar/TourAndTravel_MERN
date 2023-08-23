@@ -1,22 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import '../Booking/booking.css';
 import { Button, Form, FormGroup, ListGroup, ListGroupItem } from "reactstrap";
 import { useNavigate } from 'react-router-dom';
 
+import { Auth } from '../../userAuth/Auth';
+import { BASE_URL } from '../../utils/connConfig';
+
 const Booking = ({ tourData }) => {
-    const { price } = tourData;
+    const { price, tour } = tourData;
     const navigate = useNavigate();
 
-    const [credentials, setCredentials] = useState({
-        userId: '01',
-        userEmail: 'rmnkaul@gmail.com',
+    const { user } = useContext(Auth);
+
+    const [booking, setBooking] = useState({
+        userId: user && user._id,
+        userEmail: user && user.userEmail,
+        tour: tour,
         fullName: '',
         contact: '',
         people: 2,
         bookAt: ''
     })
     const handleChange = e => {
-        setCredentials(prev => (
+        setBooking(prev => (
             {
                 ...prev, [e.target.id]: e.target.value
             }
@@ -24,12 +30,36 @@ const Booking = ({ tourData }) => {
     };
 
     const taxes = 10;
-    const totalamount = Number(price) * Number(credentials.people) + Number(taxes);
+    const totalamount = Number(price) * Number(booking.people) + Number(taxes);
 
     //To send the data to the server
-    const handleClick = e => {
+    const handleClick = async e => {
         e.preventDefault();
-        navigate("/finalPage");
+
+        console.log(booking);
+
+        try {
+            if (!user || user === undefined || user === null) {
+                return alert('Please Login First!');
+            }
+            const response = await fetch(`${BASE_URL}/booking`, {
+                method: 'post',
+                headers: {
+                    'content-type': 'application/json',
+                },
+                credentials: 'include',
+                body: JSON.stringify(booking)
+            });
+            const result = await response.json();
+            alert("Booking is done." + result.message);
+            if (!response.ok) {
+                return alert(result.message);
+            }
+            navigate("/finalPage")
+        }
+        catch (error) {
+            alert(error.message);
+        }
     }
 
     return (
