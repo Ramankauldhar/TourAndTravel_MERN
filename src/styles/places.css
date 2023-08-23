@@ -1,19 +1,22 @@
-.tripsHeading{
+.tripsHeading {
     background-image: url("../Images/backgroundPlaces.jpeg");
-    height: 100vh;
-    width:100vw;
+    height: 450px;
+    width: 100%;
     background-size: cover;
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
 }
-.SearhSection{
+
+.SearhSection {
     margin-top: 30px;
-    padding:0;
+    padding: 0;
 }
-.tourListSection{
-    margin-top:50px;
+
+.tourListSection {
+    margin-top: 50px;
 }
-.pagination span{
+
+.pagination span {
     width: 2rem;
     height: 2rem;
     padding: 5px;
@@ -23,10 +26,10 @@
     justify-content: center;
     border: 1px solid var(--secondary-color);
     color: var(--primary-color);
-    cursor:pointer;
+    cursor: pointer;
 }
 
-.activePage{
+.activePage {
     background-color: var(--secondary-color);
-    color:white !important; 
+    color: white !important;
 }

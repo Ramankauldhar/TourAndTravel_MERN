@@ -3,6 +3,7 @@ import { Container, Row, Col } from 'reactstrap';
 import { useLocation } from 'react-router-dom';
 import PlacesCard from '../shared/PlacesCard';
 import NewsLetter from '../shared/NewsLetter';
+import SearchBar from '../shared/SearchBar';
 
 const Search = () => {
   const location = useLocation();
@@ -23,6 +24,13 @@ const Search = () => {
       <div>
         <section className='animation moveFromRight'>
           <h2 className='tripsHeading'>Tour Search Result</h2>
+        </section>
+        <section className='SearhSection'>
+          <Container>
+            <Row>
+              < SearchBar />
+            </Row>
+          </Container>
         </section>
         <section>
           <Container>
