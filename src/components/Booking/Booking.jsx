@@ -15,18 +15,24 @@ const Booking = ({ tourData }) => {
     const [booking, setBooking] = useState({
         userId: user && user._id,
         userEmail: user && user.userEmail,
-        tour: tour,
-        fullName: '',
+        tourName: tourData.tour,
+        userName: '',
+        people: '',
         contact: '',
-        people: 2,
         bookAt: ''
     })
+
+    const [validation, setValidation] = useState({
+        userName: true,
+        contact: true,
+        bookAt: true,
+        people: true
+    });
+
     const handleChange = e => {
-        setBooking(prev => (
-            {
-                ...prev, [e.target.id]: e.target.value
-            }
-        ))
+        const { id, value } = e.target;
+        setBooking(prev => ({ ...prev, [id]: value }));
+        setValidation(prevValidation => ({ ...prevValidation, [id]: value.trim() !== '' }));
     };
 
     const taxes = 10;
@@ -42,6 +48,7 @@ const Booking = ({ tourData }) => {
             if (!user || user === undefined || user === null) {
                 return alert('Please Login First!');
             }
+            
             const response = await fetch(`${BASE_URL}/booking`, {
                 method: 'post',
                 headers: {
@@ -51,7 +58,6 @@ const Booking = ({ tourData }) => {
                 body: JSON.stringify(booking)
             });
             const result = await response.json();
-            alert("Booking is done." + result.message);
             if (!response.ok) {
                 return alert(result.message);
             }
@@ -68,13 +74,13 @@ const Booking = ({ tourData }) => {
                 <i className="ri-bookmark-fill bookingIcon"></i> <span className='titleText'>Booking Information</span>
                 <Form className='bookingForm' onSubmit={handleClick}>
                     <FormGroup>
-                        <label>Full Name:</label><br /><input type='text' placeholder='Full Name' id="fullName" required onChange={handleChange} />
+                        <label>Full Name:</label><br /><input type='text' placeholder='Full Name' id="userName" required onChange={handleChange} />
                     </FormGroup>
                     <FormGroup>
                         <label>Contact:</label><br /><input type='number' placeholder='Contact' id="contact" required onChange={handleChange} />
                     </FormGroup>
                     <FormGroup>
-                        <label>Booking Date:</label><br /><input type='date' id="date" required onChange={handleChange} /><br />
+                        <label>Booking Date:</label><br /><input type='date' id="bookAt" required onChange={handleChange} /><br />
                     </FormGroup>
                     <FormGroup>
                         <label>Number of People:</label><br /><input type='number' placeholder='Number of People' id="people" required onChange={handleChange} />
@@ -85,19 +91,30 @@ const Booking = ({ tourData }) => {
                 <ListGroup>
                     <ListGroupItem className='bookingBottomDetails'>
                         <h5>Price per person</h5>
-                        <span>${price}</span>
+                        <span>1 x ${price}</span>
+                    </ListGroupItem>
+                     <ListGroupItem className='bookingBottomDetails'>
+                        <h5>Your Price</h5>
+                        <span>${(booking.people)*6000}</span>
                     </ListGroupItem>
                     <ListGroupItem className='bookingBottomDetails'>
                         <h5>Taxes:</h5>
-                        <span>${taxes}</span>
+                        <span>+${taxes}</span>
                     </ListGroupItem>
                     <ListGroupItem className='bookingBottomDetails'>
-                        <h5>Total:</h5>
+                        <h5>Grand Total:</h5>
                         <span>${totalamount}</span>
                     </ListGroupItem>
                 </ListGroup>
                 <Button className='btn secondaryBtn bookBtn' onClick={handleClick}>Book Now</Button>
             </div>
+
+            {/* Error messages */}
+            {!validation.userName && <p className="error">Please enter your name.</p>}
+            {!validation.contact && <p className="error">Please enter a valid contact number.</p>}
+            {!validation.bookAt && <p className="error">Please select a booking date.</p>}
+            {!validation.people && <p className="error">Please enter the number of people.</p>}
+
         </div>
     )
 }
