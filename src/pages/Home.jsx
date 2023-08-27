@@ -8,6 +8,7 @@ import {Link} from "react-router-dom";
 import Gallery from '../components/Gallery/Gallery';
 import Testimonials from '../components/Testimonial/Testimonials';
 import NewsLetter from '../shared/NewsLetter';
+import OffersList from '../components/Offers/OffersList';
 
 import TextRotator from '../components/TextAndPictureRotator/TextRotator';
 import MediaRotator from '../components/TextAndPictureRotator/MediaRotator';
@@ -67,77 +68,12 @@ return <>
       <div>
          <SearchBar/>
       </div>
-    </section> 
+    </section>
 
     <section className='tripsSection animation moveFromLeft'>
       <div>
         <h2>Special Offers</h2>
-           <div className="containerTop">
-              <div className='cardContainer'>
-                <div className='imgContainer'>
-                    <Link to="/turkey">
-                       <img src={turkeyImg} alt='Memories' className='images'/>
-                    </Link>
-                    <span className='offerText'>Offer</span>
-                </div>
-                 <div className='cardFooter2'>
-                    <p className='cardParaHeading'>Turkey Trip</p>
-                    <div className='MoreDetails'>
-                        <p>Length: 7 Days </p>
-                        <p>was <del>$20,000</del> <ins className='priceText'>$10,000</ins></p>
-                    </div>
-                    <p>Package for 4 people</p>
-                 </div>
-              </div>
-              <div  className='cardContainer'>
-                <div className='imgContainer'>
-                  <Link to="/india">
-                   <img src={indiaImg} alt='Capture Moments' className='images'/>
-                  </Link>
-                  <span className='offerText'>Offer</span>
-                </div>
-                <div className='cardFooter2'>
-                  <p className='cardParaHeading'>India Trip</p>
-                  <div className='MoreDetails'>
-                    <p>Length: 7 Days </p>
-                    <p>was <del>$25,000</del> <ins className='priceText'>$15,000</ins></p>
-                  </div>
-                  <p>Package for 5 people</p>
-                </div>
-              </div>
-              <div className='cardContainer'>
-                 <div className='imgContainer'>
-                    <Link to="/dubai">
-                      <img src={dubaiImg} alt='Explore the World' className='images'/>
-                    </Link>
-                    <span className='offerText'>Offer</span>
-                 </div>
-                <div className='cardFooter2'>
-                  <p className='cardParaHeading'>Dubai Trip</p>
-                  <div className='MoreDetails'>
-                    <p>Length: 7 Days </p>
-                    <p>was <del>$8,000</del> <ins className='priceText'>$6,000</ins></p>
-                  </div>
-                  <p>Package for 2 people</p>
-                </div>
-              </div>
-              <div  className='cardContainer'>
-                <div className='imgContainer'>
-                  <Link to="/japan">
-                      <img src={japanImg} alt='Capture Moments' className='images'/>
-                  </Link>
-                  <span className='offerText'>Offer</span>
-                </div>
-                <div className='cardFooter2'>
-                  <p className='cardParaHeading'>Japan and South Korea Trip</p>
-                  <div className='MoreDetails'>
-                    <p>Length: 13 Days </p>
-                    <p>was <del>$24,000</del> <ins className='priceText'>$20,000</ins></p>
-                  </div>
-                  <p>Package for 4 people</p>
-                </div>
-              </div>
-        </div>
+          <OffersList/> 
       </div>
     </section>
 

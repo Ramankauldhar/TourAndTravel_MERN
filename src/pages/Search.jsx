@@ -32,7 +32,7 @@ const Search = () => {
             </Row>
           </Container>
         </section>
-        <section>
+        <section className='searchResultDiv'>
           <Container>
             <Row>
               {loading ? (

@@ -61,6 +61,7 @@ const Places = () => {
 
       <section>
         <Container>
+        <h3>Check our feedbacks from other customers</h3>
           <Row>
             <Testimonial />
           </Row>

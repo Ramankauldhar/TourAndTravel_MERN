@@ -12,7 +12,7 @@ const FinalBooking = () => {
           <i className="ri-shake-hands-fill icon"></i>
           <p className='thankyouText'>Thank You for your booking with us!</p>
           <p>Your Booking is confirmed</p>
-          <Button className='btn secondaryBtn bookBtn2'><Link to="/home">Back to Home</Link></Button>
+          <Link to="/home"><Button className='btn secondaryBtn bookBtn2'>Back to Home</Button></Link>
         </div>
         </Col>
       </Row>

@@ -7,7 +7,6 @@ import { BASE_URL } from '../../utils/connConfig';
 
 const TourList = () => {
   const { data: allTours, loading, error } = FetchData(`${BASE_URL}/tours`);
-  console.log(allTours);
 
   return (
     <>

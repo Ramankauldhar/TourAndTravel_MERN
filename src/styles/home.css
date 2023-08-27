@@ -140,84 +140,6 @@ h4 {
 }
 
 /*----------------------------------------------------------------------------*/
-/*Special Offers section*/
-.containerTop {
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: 5%;
-    margin-right: 5%;
-    justify-content: space-between;
-}
-
-.cardContainer {
-    color: var(--primary-color);
-    background-color: #f3af1b;
-    margin: 5px;
-    width: 24%;
-    overflow: hidden;
-}
-
-.cardParaHeading {
-    font-size: large;
-    font-weight: 600;
-}
-
-.MoreDetails {
-    display: flex;
-    justify-content: space-between;
-}
-
-.cardFooter2 {
-    padding: 15px;
-    text-align: center;
-}
-
-.imgContainer {
-    width: 100%;
-    height: 300px;
-    padding: 0;
-    cursor: pointer;
-    transition: 0.4s ease-in-out;
-    position: relative;
-}
-
-.images {
-    width: 100%;
-    height: 300px;
-    padding: 0;
-    cursor: pointer;
-    transition: 0.4s ease-in-out;
-    object-fit: cover;
-    position: relative;
-}
-
-.images:hover {
-    transform: scale(1.1);
-    transition: 1s ease-in-out;
-    opacity: 0.6;
-}
-
-.priceText {
-    font-size: 22px;
-    font-weight: 600;
-}
-
-.offerText {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: max-content;
-    height: max-content;
-    z-index: 10;
-    background-color: var(--secondary-color);
-    color: white;
-    padding: 5px;
-    border-radius: 20px;
-    font-size: large;
-    padding: 10px;
-}
-
-/*----------------------------------------------------------------------------*/
 /* all trips section*/
 .tourListContainer {
     margin-left: 5%;
@@ -259,8 +181,8 @@ h4 {
 }
 
 .testimonialContainer {
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left:5%;
+    margin-right:5%;
 }
 
 .testimonialDiv {
@@ -283,8 +205,8 @@ h4 {
 /*----------------------------------------------------------------------------*/
 /*NEWS letter section*/
 .NewsSection {
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 0px;
+    margin-right: 0px;
 }
 
 /*----------------------------------------------------------------------------*/
@@ -472,6 +394,11 @@ h4 {
 textarea {
     width: 100%;
     border-color: var(--secondary-color);
+}
+
+/*Search result Page*/
+.searchResultDiv{
+    margin-top:50px;
 }
 
 

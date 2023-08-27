@@ -124,6 +124,10 @@ const PlacesInfo = () => {
             {tour === 'India Tour' && <IndiaTrip />}
             {tour === 'Japan and South Korea Tour' && <JapanSouthKoreaTrip />}
             {tour === 'Turkey Tour' && <TurkeyTrip />}
+            {tour === 'India Royal and Heritage Tour' && <IndiaTrip />}
+            {tour === 'Turkey beautiful Places Tour' && <TurkeyTrip />}
+            {tour === 'Dubai Night View Tour' && <DubaiTrip />}
+            {tour === 'Japan and Korea Magic Tour' && <JapanSouthKoreaTrip />}
           </div>
           <div className='extraInfoContainer'>
             <div>
