@@ -35,8 +35,7 @@ const Booking = ({ tourData }) => {
         setValidation(prevValidation => ({ ...prevValidation, [id]: value.trim() !== '' }));
     };
 
-    const taxes = 10;
-    const totalamount = Number(price) * Number(booking.people) + Number(taxes);
+    const totalamount = Number(price) * Number(booking.people);
 
     //To send the data to the server
     const handleClick = async e => {
@@ -93,16 +92,9 @@ const Booking = ({ tourData }) => {
                         <h5>Price per person</h5>
                         <span>1 x ${price}</span>
                     </ListGroupItem>
-                     <ListGroupItem className='bookingBottomDetails'>
+        
+                    <ListGroupItem className='bookingBottomDetails'>
                         <h5>Your Price</h5>
-                        <span>${(booking.people)*6000}</span>
-                    </ListGroupItem>
-                    <ListGroupItem className='bookingBottomDetails'>
-                        <h5>Taxes:</h5>
-                        <span>+${taxes}</span>
-                    </ListGroupItem>
-                    <ListGroupItem className='bookingBottomDetails'>
-                        <h5>Grand Total:</h5>
                         <span>${totalamount}</span>
                     </ListGroupItem>
                 </ListGroup>
