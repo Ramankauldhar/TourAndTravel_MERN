@@ -18,6 +18,12 @@ h4 {
     padding: 10px;
 }
 
+#nextPage {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
 /*----------------------------------------------------------------------------*/
 /*Background Img section*/
 .backgroundImage,
@@ -181,8 +187,8 @@ h4 {
 }
 
 .testimonialContainer {
-    margin-left:5%;
-    margin-right:5%;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 .testimonialDiv {
@@ -338,7 +344,7 @@ h4 {
 
 .textDiv {
     position: absolute;
-    top: 28%;
+    top: 15%;
     left: 10%;
     right: 10%;
     margin: auto;
@@ -365,28 +371,28 @@ h4 {
 
 .contactFormContainer {
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.openingHoursDiv {
-    width: 30%;
-    border: 1px solid black;
-    margin-right: 2px;
-    padding: 10px;
+.contactImageDiv {
+    width: 40%;
+}
+
+.contactImageDiv img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .bookingFormDiv {
-    width: 70%;
-    border: 1px solid black;
+    width: 60%;
+    border: 1px solid var(--primary-color);
+    border-radius: 50px;
+    padding: 20px;
 }
 
-.openingHoursDiv p {
-    font-weight: 500;
-    text-align: center;
-    padding: 0;
-    margin: 0;
-}
-
-.openingHoursDiv span {
+.queryText {
     text-align: center;
 }
 
@@ -396,9 +402,41 @@ textarea {
     border-color: var(--secondary-color);
 }
 
+.openingHoursSection {
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.openingHoursSection p {
+    font-weight: 500;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.openingHoursSection span {
+    text-align: center;
+}
+
+.openingHourTitle {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: var(--text-Color);
+}
+
+.mapSection {
+    margin-top: 50px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
 /*Search result Page*/
-.searchResultDiv{
-    margin-top:50px;
+.searchResultDiv {
+    margin-top: 50px;
 }
 
 
@@ -407,6 +445,18 @@ textarea {
 @media only screen and (max-width: 1200px) {
     .cardContainer {
         width: 48%;
+    }
+
+    .contactFormContainer {
+        display: block;
+    }
+
+    .contactImageDiv {
+        display: none;
+    }
+
+    .bookingFormDiv {
+        width: 100%;
     }
 }
 
@@ -419,16 +469,10 @@ textarea {
     .infoContainer {
         width: 100%;
     }
+
 }
 
 @media only screen and (max-width: 900px) {
-
-    .backgroundImage,
-    .backgroundVideo {
-        height: 350px;
-        width: 100%;
-    }
-
     .firstText {
         font-size: 25px;
     }
@@ -458,23 +502,11 @@ textarea {
     }
 
     .planeImg {
-        height: 40px;
-        width: 40px;
+        height: 50px;
+        width: 50px;
     }
 
     .experienceSection {
-        width: 100%;
-    }
-
-    .contactFormContainer {
-        display: block;
-    }
-
-    .openingHoursDiv {
-        display: none;
-    }
-
-    .bookingFormDiv {
         width: 100%;
     }
 
@@ -502,6 +534,14 @@ textarea {
 
     .cardContainer {
         width: 100%;
+    }
+
+    .introContainer {
+        width: 100%;
+    }
+
+    .infoContainer {
+        display: none;
     }
 }
 
@@ -580,7 +620,7 @@ textarea {
     }
 
     100% {
-        left: 85%;
+        left: 90%;
         top: 0px;
     }
 }
