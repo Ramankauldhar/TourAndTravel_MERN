@@ -1,3 +1,7 @@
+import { gsap } from 'gsap';
+import LocomotiveScroll from 'locomotive-scroll';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+
 function loco(){
   gsap.registerPlugin(ScrollTrigger);
 
@@ -31,3 +35,22 @@ ScrollTrigger.refresh();
 
 }
 loco();
+
+var clutter = "";
+ document.querySelector(".travelingText").textContent.split("").forEach(function(dets){
+  clutter += `<span> ${dets}</span>`
+  document.querySelector(".travelingText").innerHTML = clutter;
+ });
+
+gsap.to(".travelingText", {
+  ScrollTrigger:{
+    trigger: `.travelingText`,
+    start:`top bottom`,
+    end:`bottom top`,
+    scroller: `#main`,
+    scrub: .5,
+    markers: true
+  },
+  stagger: .2,
+  color:`#0000`,
+})

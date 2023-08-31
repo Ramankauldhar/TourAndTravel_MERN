@@ -1,4 +1,4 @@
-:root{
+:root {
   --primary-color: #002F6C;
   --secondary-color: #f3af1b;
   --text-Color: #d1e3fa;
@@ -6,26 +6,39 @@
   --sub-headings-color: rgb(107, 107, 107);
   --font-names: Mako, Cambria, Georgia, serif;
 }
-*{
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-body{
+
+body {
   font-family: var(--font-names);
   font-size: 20px;
+  height: 100%;
+  width: 100%;
 }
-h1, h2, h3, h4, h5, h6, h7{
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+h7 {
   color: var(--heading-color);
 }
 
-a{
+a {
   text-decoration: none;
   color: unset;
 }
-ul{
+
+ul {
   list-style: none;
 }
+
 .primaryBtn {
   background: transparent !important;
   text-decoration: none;
@@ -45,8 +58,8 @@ ul{
   background: var(--secondary-color) !important;
   color: black;
   border: none;
-  border-radius: 0px 20px ;
-  margin-right:10px;
+  border-radius: 0px 20px;
+  margin-right: 10px;
 }
 
 .secondaryBtn a {
@@ -54,11 +67,12 @@ ul{
   color: white;
 }
 
-.primaryBtn:hover{
+.primaryBtn:hover {
   border-radius: 0px 20px;
   transition: 1s linear;
 }
-.secondaryBtn:hover{
-  border-radius: 0px 20px ;
+
+.secondaryBtn:hover {
+  border-radius: 0px 20px;
   transition: 1s linear;
 }

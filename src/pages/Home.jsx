@@ -17,52 +17,51 @@ import exploreWorldImg from '../Images/exploreWorld.jpg';
 import captureMomentsImg from '../Images/captureMoments.jpg';
 
 const Home = () => {
-  return <div id='main'>
-    <section data-scroll data-scroll-speed="-5" className='backgroundImage'>
+  return <>
+    <section className='backgroundImage'>
       <MediaRotator />
     </section>
     <h1>Travel Around The World With Us</h1>
 
-    <div id='nextPage'>
-      <section className='firstSection animation moveFromBottom'>
-        <div className="introSection">
-          <div className="introContainer">
-            <div className="textContainer">
-              <TextRotator />
-            </div>
-            <p className="travelingText"><b>Traveling</b> makes you happy especially when you travel with your lovedones.
-              Traveling gives you a chance to make beautiful memories with others by exploring beautiful places around the world.
-              We are here to make your experience even more enjoyable and meaningful by providing you the best package and travel guide to explore many places around the world.</p>
+    <section className='firstSection animation moveFromBottom'>
+      <div className="introSection">
+        <div className="introContainer">
+          <div className="textContainer">
+            <TextRotator />
           </div>
+          <p className="travelingText"><b>Traveling</b> makes you happy especially when you travel with your lovedones.
+            Traveling gives you a chance to make beautiful memories with others by exploring beautiful places around the world.
+            We are here to make your experience even more enjoyable and meaningful by providing you the best package and travel guide to explore many places around the world.</p>
+        </div>
 
-          <div className="infoContainer">
-            <div className='card'>
-              <img src={memoriesImg} alt='Memories' className='imagesInCard' />
-              <div className='cardFooter'>
-                <p className='cardPara'>Travel to Create memories with your friends and family</p>
-              </div>
+        <div className="infoContainer">
+          <div className='card'>
+            <img src={memoriesImg} alt='Memories' className='imagesInCard' />
+            <div className='cardFooter'>
+              <p className='cardPara'>Travel to Create memories with your friends and family</p>
             </div>
-            <div className='card'>
-              <img src={exploreWorldImg} alt='Explore the World' className='imagesInCard' />
-              <div className='cardFooter'>
-                <p className='cardPara'>Travel to Explore the world to enhance your knowledge</p>
-              </div>
+          </div>
+          <div className='card'>
+            <img src={exploreWorldImg} alt='Explore the World' className='imagesInCard' />
+            <div className='cardFooter'>
+              <p className='cardPara'>Travel to Explore the world to enhance your knowledge</p>
             </div>
-            <div className='card'>
-              <img src={captureMomentsImg} alt='Capture Moments' className='imagesInCard' />
-              <div className='cardFooter'>
-                <p className='cardPara'>Travel to Capture the moments on beautiful places</p>
-              </div>
+          </div>
+          <div className='card'>
+            <img src={captureMomentsImg} alt='Capture Moments' className='imagesInCard' />
+            <div className='cardFooter'>
+              <p className='cardPara'>Travel to Capture the moments on beautiful places</p>
             </div>
           </div>
         </div>
-      </section>
-      <section className='searchSection animation moveFromBottom'>
-        <div>
-          <SearchBar />
-        </div>
-      </section>
-    </div>
+      </div>
+    </section>
+
+    <section className='searchSection animation moveFromBottom'>
+      <div>
+        <SearchBar />
+      </div>
+    </section>
 
     <section className='tripsSection animation moveFromLeft'>
       <div>
@@ -101,7 +100,7 @@ const Home = () => {
         <NewsLetter />
       </div>
     </section>
-  </div>
+  </>
 };
 
 export default Home;

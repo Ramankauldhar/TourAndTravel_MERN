@@ -1,21 +1,24 @@
 .mainContainer {
     display: flex;
     justify-content: space-between;
-    gap:5px;
+    gap: 5px;
     flex-wrap: wrap;
 }
-.offersContainer{
+
+.offersContainer {
     color: var(--primary-color);
     background-color: rgb(218, 219, 246);
     margin: 5px;
     overflow: hidden;
     width: 100%;
 }
-.placeContainer{
+
+.placeContainer {
     flex-basis: calc(33.33% - 5px);
     /* 33.33% to show three places in one row, subtracting gap */
     padding: 0px;
 }
+
 .cardParaHeadingP {
     font-size: large;
     font-weight: 600;
@@ -29,7 +32,7 @@
 
 .cardFooterP {
     text-align: center;
-    padding:15px;
+    padding: 15px;
 }
 
 .priceTextP {
@@ -48,19 +51,20 @@
     width: max-content;
     height: max-content;
     z-index: 10;
-    background-color:#002F6C;
+    background-color: #002F6C;
     color: white;
     padding: 5px;
     border-radius: 5px 0 0 0;
 }
 
 @media only screen and (max-width: 1200px) {
-    .placeContainer{
+    .placeContainer {
         flex-basis: calc(50% - 5px);
     }
 }
+
 @media only screen and (max-width: 750px) {
-    .offersContainer{
+    .offersContainer {
         min-height: 480px;
     }
 }
@@ -69,7 +73,8 @@
     .mainContainer {
         display: block;
     }
-    .placeContainer{
-        flex-basis: calc(50% - 20px);
+
+    .placeContainer {
+        flex-basis: calc(100%);
     }
 }

@@ -1,18 +1,25 @@
-.footerMainContainer{
+.footerMainContainer {
     margin-top: 50px;
     padding: 10px;
     background-color: #faf9f6;
 }
-.mediaIcon{
+
+.mediaIcon {
     height: 34px;
-    width:34px;
+    width: 34px;
 }
-.list{
+
+.list {
     background-color: #faf9f6;
 }
+
+.quickLinks {
+    background-color: #faf9f6;
+}
+
 .quickLinks a {
     text-decoration: none;
-    color:  #002F6C;
+    color: #002F6C;
     font-weight: 600;
     font-size: large;
 }

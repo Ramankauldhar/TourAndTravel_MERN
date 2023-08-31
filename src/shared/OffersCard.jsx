@@ -20,7 +20,7 @@ const OffersCard = ({ place }) => {
 
   return (
     <div className="mainContainer">
-      <div>
+      <div className='cardContainer'>
         <div className='imgContainer'>
           <Link to={`/places/${_id}`}>
             <img src={imageUrl} alt='tourplaces' className='images' />

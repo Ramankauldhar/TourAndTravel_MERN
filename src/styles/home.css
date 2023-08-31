@@ -18,12 +18,6 @@ h4 {
     padding: 10px;
 }
 
-#nextPage {
-    position: relative;
-    height: 100vh;
-    width: 100vw;
-}
-
 /*----------------------------------------------------------------------------*/
 /*Background Img section*/
 .backgroundImage,
@@ -58,31 +52,29 @@ h4 {
 /*----------------------------------------------------------------------------*/
 /*First Intro section*/
 .firstSection {
-    position: relative;
     margin-left: 5%;
     margin-right: 5%;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
 .introSection {
     max-width: 100%;
     height: auto;
-    display: flex;
+    display: block;
 }
 
 .introContainer {
-    width: 38%;
     font-size: large;
     padding-top: 10px;
 }
 
 .infoContainer {
     display: flex;
-    width: 62%;
     flex-wrap: wrap;
-    justify-content: space-between;
     overflow: hidden;
-    margin-left: 10px;
+    margin: auto;
+    width: 100%;
+    justify-content: center;
 }
 
 .card {
@@ -135,6 +127,7 @@ h4 {
     text-align: justify;
     justify-content: center;
     animation-delay: 0.5s;
+    font-size: 1.5rem;
 }
 
 /*----------------------------------------------------------------------------*/
@@ -154,6 +147,8 @@ h4 {
 
 .tripsSection {
     margin-top: 50px;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 .allTripsSection {
@@ -211,6 +206,7 @@ h4 {
 /*----------------------------------------------------------------------------*/
 /*NEWS letter section*/
 .NewsSection {
+    margin-top: 50px;
     margin-left: 0px;
     margin-right: 0px;
 }
@@ -254,7 +250,7 @@ h4 {
     margin-left: 10%;
     margin-right: 10%;
     background-color: rgb(223, 239, 253);
-    overflow: scroll;
+    overflow: hidden;
     min-height: 250px;
 }
 
@@ -373,10 +369,12 @@ h4 {
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 550px;
 }
 
 .contactImageDiv {
     width: 40%;
+    height: 100%;
 }
 
 .contactImageDiv img {
@@ -427,6 +425,7 @@ textarea {
     background-color: var(--primary-color);
     color: var(--text-Color);
 }
+
 
 .mapSection {
     margin-top: 50px;
@@ -512,6 +511,13 @@ textarea {
 
 }
 
+@media only screen and (max-width:780px) {
+    .infoContainer {
+        display: none;
+    }
+
+}
+
 @media only screen and (max-width: 580px) {
     .backgroundImage {
         display: none;
@@ -538,10 +544,6 @@ textarea {
 
     .introContainer {
         width: 100%;
-    }
-
-    .infoContainer {
-        display: none;
     }
 }
 

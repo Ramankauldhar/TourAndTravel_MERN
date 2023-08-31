@@ -1,42 +1,33 @@
 /*----------------------------------------------------------------------------*/
 /*Special Offers section*/
-.containerTop {
+.mainContainer {
     display: flex;
-    flex-wrap: wrap;
-    margin-left: 5%;
-    margin-right: 5%;
     justify-content: space-between;
+    gap: 5px;
+    flex-wrap: wrap;
+    width: 100%;
+    height: fit-content
 }
 
 .cardContainer {
     color: var(--primary-color);
     background-color: #f3af1b;
     margin: 5px;
-    flex-basis: calc(24% - 5px);
     overflow: hidden;
+    width: 100%;
 }
 
-.cardParaHeading {
-    font-size: large;
-    font-weight: 600;
-}
-
-.MoreDetails {
-    display: flex;
-    justify-content: space-between;
-}
-
-.cardFooter2 {
-    padding: 15px;
-    text-align: center;
+.offerDetailsContainer {
+    flex-basis: calc(25% - 5px);
+    /* 24% to show four places in one row, subtracting gap */
+    padding: 0px;
+    height: fit-content;
 }
 
 .imgContainer {
     width: 100%;
     height: 300px;
     padding: 0;
-    cursor: pointer;
-    transition: 0.4s ease-in-out;
     position: relative;
 }
 
@@ -54,6 +45,21 @@
     transform: scale(1.1);
     transition: 1s ease-in-out;
     opacity: 0.6;
+}
+
+.cardParaHeading {
+    font-size: large;
+    font-weight: 600;
+}
+
+.MoreDetails {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cardFooter2 {
+    padding: 15px;
+    text-align: center;
 }
 
 .priceText {
@@ -75,17 +81,40 @@
     font-size: large;
     padding: 10px;
 }
-.iconForOffers{
+
+.iconForOffers {
     font-size: 24px;
-    color:yellow;
+    color: yellow;
     padding: 5px;
 }
 
-@media only screen and (max-width: 1200px) {
-    .containerTop {
+@media only screen and (max-width: 1350px) {
+    .offerDetailsContainer {
+        flex-basis: calc(50% - 5px);
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .cardContainer {
+        min-height: 480px;
+    }
+}
+
+/*For mobile phone*/
+@media only screen and (max-width: 600px) {
+    .mainContainer {
         display: block;
     }
-    .cardContainer{
-        flex-basis: calc(50% - 10px);
+
+    .offerDetailsContainer {
+        flex-basis: calc(100%);
+    }
+
+    .imgContainer {
+        height: 200px;
+    }
+
+    .images {
+        height: 200px;
     }
 }
