@@ -10,6 +10,7 @@ import Search from "./../pages/Search";
 import FinalBooking from "./../pages/FinalBooking";
 import About from "../pages/About";
 import Contact from "../pages/Contact";
+import GetBookings from "../pages/GetBookings";
 
 import TurkeyTrip from "../tripsPages/TurkeyTrip";
 import IndiaTrip from "../tripsPages/IndiaTrip";
@@ -33,6 +34,7 @@ const Routers = () => {
       <Route path="/india" element={<IndiaTrip />} />
       <Route path="/dubai" element={<DubaiTrip />} />
       <Route path="/japan" element={<JapanSouthKoreaTrip />} />
+      <Route path="/userBookings" element={<GetBookings />} />
     </Routes>
   );
 };

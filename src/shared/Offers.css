@@ -109,12 +109,4 @@
     .offerDetailsContainer {
         flex-basis: calc(100%);
     }
-
-    .imgContainer {
-        height: 200px;
-    }
-
-    .images {
-        height: 200px;
-    }
 }
