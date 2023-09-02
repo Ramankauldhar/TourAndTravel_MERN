@@ -64,8 +64,8 @@ function Header() {
               user ?
                 <>
                   <p className='userNameText'>{user.userName}</p>
-                  <Button className='btn primaryBtn' onClick={logoutFunc}>Logout</Button>
                   <Link to='/userBookings'><Button className='btn primaryBtn'>Bookings</Button></Link>
+                  <Button className='btn primaryBtn' onClick={logoutFunc}>Logout</Button>
                 </> : <>
                   <Link to='/login'><Button className='btn primaryBtn'>Login</Button></Link>
                   <Link to='/register'><Button className='btn secondaryBtn'>Register</Button></Link>

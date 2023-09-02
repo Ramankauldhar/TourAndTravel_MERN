@@ -438,6 +438,28 @@ textarea {
     margin-top: 50px;
 }
 
+/*GetBookings page*/
+.bookingInfoDiv{
+    background-color: rgb(233, 233, 244);;
+    padding:10px;
+    margin:20px;
+}
+.bookingInfoDiv h5 {
+    background-color: var(--secondary-color);
+    padding:10px;
+}
+.bookingInfoDiv p{
+    padding-left:10px;
+}
+.totalTextOnUserBookingPage{
+    float:right;
+    margin:10px;
+}
+.textNumber::after{
+    content: "";
+    clear: both;
+    display: block;
+}
 
 /*----------------------------------------------------------------------------*/
 /*Media Quaries*/
