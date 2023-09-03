@@ -77,7 +77,7 @@ const Booking = ({ tourData}) => {
                         <label>Full Name:</label><br /><input type='text' placeholder='Full Name' id="userName" required onChange={handleChange} />
                     </FormGroup>
                     <FormGroup>
-                        <label>Contact:</label><br /><input type='number' placeholder='Contact' id="contact" required onChange={handleChange} />
+                        <label>Contact:</label><br /><input type='tel' placeholder='Contact' id="contact" required onChange={handleChange} />
                     </FormGroup>
                     <FormGroup>
                         <label>Booking Date:</label><br /><input type='date' id="bookAt" required onChange={handleChange} /><br />
@@ -99,7 +99,7 @@ const Booking = ({ tourData}) => {
                         <span>${totalamount}</span>
                     </ListGroupItem>
                 </ListGroup>
-                <Button className='btn secondaryBtn bookBtn' onClick={handleClick}>Book Now</Button>
+                <Button type='submit' className='btn secondaryBtn bookBtn' onClick={handleClick}>Book Now</Button>
             </div>
 
             {/* Error messages */}

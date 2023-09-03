@@ -74,7 +74,7 @@ img {
     padding: 0.5rem;
 }
 
-@media only screen and (max-width: 840px) {
+@media only screen and (max-width: 900px) {
     .navBarCenter {
         display: none;
     }
@@ -110,7 +110,7 @@ img {
 
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 550px) {
     .userNameText {
         display: none;
     }

@@ -18,13 +18,12 @@ const Places = () => {
   const [page, setPage] = useState(0);
 
   const { data: tours } = FetchData(`${BASE_URL}/tours?page=${page}`);
-  const { data: tourCount } = FetchData(`${BASE_URL}/counts/getTourCount`);
 
   useEffect(() => {
-    const pages = Math.ceil(tourCount / 6)
+    const pages = Math.ceil(5 / 6)
     setPageCount(pages);
     window.scrollTo(0, 0)
-  }, [page, tourCount, tours]);
+  }, [page, tours]);
 
 
   return (
