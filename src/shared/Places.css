@@ -72,9 +72,14 @@
 @media only screen and (max-width: 600px) {
     .mainContainer {
         display: block;
+        gap:0;
     }
 
     .placeContainer {
         flex-basis: calc(100%);
+    }
+    .offersContainer  {
+        margin-left: auto;
+        margin-right: auto;
     }
 }

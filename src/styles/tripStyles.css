@@ -16,7 +16,7 @@
   /* The actual timeline (the vertical ruler) */
   .timeline {
     position: relative;
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
   }
   
@@ -34,7 +34,7 @@
   
   /* Container around content */
   .detailContainer {
-    padding: 10px 40px;
+    padding: 10px;
     position: relative;
     width: 50%;
   }

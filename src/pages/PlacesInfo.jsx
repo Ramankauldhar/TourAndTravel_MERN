@@ -88,7 +88,7 @@ const PlacesInfo = () => {
       <section>
         <div className='toursContainer'>
           <div className='tourContent'>
-            <img src={imageUrl} alt="placeImg" className='tourImages' />
+            <img src={imageUrl} alt="place" className='tourImages' />
             <h2 className='tourName'>{tour}</h2>
             <h3>Tour Details</h3>
             <div className='tourinfo'>
@@ -131,7 +131,7 @@ const PlacesInfo = () => {
           </div>
           <div className='extraInfoContainer'>
             <div>
-              <Booking tourData={tourData} />
+              <Booking tourData={tourData}/>
             </div>
             <div>
               <p className='titleText'><img src={cloudIcon} alt="temp in celsius icon" className='icon' /> Weather Guide</p>
@@ -201,15 +201,15 @@ const PlacesInfo = () => {
           </h4>
           <Form onSubmit={submitHandler} className='formData'>
             <div className='rating'>
-              <span onClick={() => setTourRating(1)}>1<i class="ri-star-fill"></i></span>
-              <span onClick={() => setTourRating(2)}>2<i class="ri-star-fill"></i></span>
-              <span onClick={() => setTourRating(3)}>3<i class="ri-star-fill"></i></span>
-              <span onClick={() => setTourRating(4)}>4<i class="ri-star-fill"></i></span>
-              <span onClick={() => setTourRating(5)}>5<i class="ri-star-fill"></i></span>
+              <span onClick={() => setTourRating(1)} className={tourRating >= 1 ? 'star-filled' : ''}>1<i className="ri-star-fill"></i></span>
+              <span onClick={() => setTourRating(2)} className={tourRating >= 2 ? 'star-filled' : ''}>2<i className="ri-star-fill"></i></span>
+              <span onClick={() => setTourRating(3)} className={tourRating >= 3 ? 'star-filled' : ''}>3<i className="ri-star-fill"></i></span>
+              <span onClick={() => setTourRating(4)} className={tourRating >= 4 ? 'star-filled' : ''}>4<i className="ri-star-fill"></i></span>
+              <span onClick={() => setTourRating(5)} className={tourRating >= 5 ? 'star-filled' : ''}>5<i className="ri-star-fill"></i></span>
             </div>
             <div className='inputArea'>
-              <input type="text" placeholder='Write your reviews about this trip' ref={reviewMsgRef} required className='inputField' />
-              <Button className='btn secondaryBtn'>Submit</Button>
+              <input type="text" placeholder='Write your reviews about this trip' ref={reviewMsgRef} required className='inputField' /><br/>
+              <Button className='btn secondaryBtn reviewSubmitButton'>Submit</Button>
             </div>
           </Form>
           <h5>
@@ -233,7 +233,7 @@ const PlacesInfo = () => {
                         <span>({review.rating}/5)</span>
                       </div>
                       <p>{review.reviewText}</p>
-                      <p>{new Date(review.createdAt).toLocaleDateString("en-Us", options)}</p>
+                      <p>{new Date(review.createdAt).toLocaleDateString("en-Ca", options)}</p>
                     </div>
                   </div>
                   <hr />

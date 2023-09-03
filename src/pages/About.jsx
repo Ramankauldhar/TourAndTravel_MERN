@@ -18,10 +18,7 @@ const About = () => {
               <div className='experienceContent'>
                 <h2>About Us</h2>
                 <p className="expText">We are master in making your trip fantastic. We are helping people to stay healthy and possitive during their travel journey as it is important to create good memories on beautiful places.
-                  We have 10,000 of people who took out great trip and their feedback can tell you their experince with us.
-                  We provide you lots of travel benifts and travel insurance and tour guide is our atmost priority.
-                  We value your safety and that's why our travel guidance will make sure to provide you comfort and safety.
-                  We value our customers as your travel journey becomes our responsibility to make it best with the best guide.
+                  We have 10,000 of people who took out great trip and their feedback can tell you their experince with us.We value our customers as your travel journey becomes our responsibility to make it best with the best guide.
                 </p>
               </div>
               <div className='counterWrapper'>

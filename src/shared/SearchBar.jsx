@@ -64,7 +64,7 @@ const SearchBar = () => {
             <span><img className='icon' src={groupIcon} alt='group' /></span>
             <div className='fieldDisplay'>
               <label>Persons: </label>
-              <input type="number" placeholder='1' ref={noOfPeopleRef} />
+              <input type="number" placeholder='1' ref={noOfPeopleRef}/>
             </div>
           </FormGroup>
           <FormGroup className='d-flex gap-3 formGroup'>
@@ -75,7 +75,6 @@ const SearchBar = () => {
             </div>
           </FormGroup>
           <span className='searchIcon' type="submit" onClick={searchHandler}>
-            <p></p>
             <p className='searchButton'>Search</p>
           </span>
 

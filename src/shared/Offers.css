@@ -109,4 +109,8 @@
     .offerDetailsContainer {
         flex-basis: calc(100%);
     }
+    .cardContainer {
+        margin-left: auto;
+        margin-right: auto;
+    }
 }

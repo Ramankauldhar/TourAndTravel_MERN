@@ -17,7 +17,6 @@ input{
     border-radius: 20PX;
     margin-left: 10px;
     padding:10px;
-    width:150px;
 }
 .errorText{
     color: red;
@@ -34,6 +33,7 @@ input{
     margin-left: 50px;
     background-color: var(--primary-color);
     color:white;
+    border-radius: 20px;
 }
 
 @media only screen and (max-width: 826px) {

@@ -6,16 +6,17 @@ import { useNavigate } from 'react-router-dom';
 import { Auth } from '../../userAuth/Auth';
 import { BASE_URL } from '../../utils/connConfig';
 
-const Booking = ({ tourData }) => {
-    const { price, tour } = tourData;
+const Booking = ({ tourData}) => {
+    const { price } = tourData;
     const navigate = useNavigate();
+    const {tour} = tourData;
 
     const { user } = useContext(Auth);
 
     const [booking, setBooking] = useState({
         userId: user && user._id,
         userEmail: user && user.userEmail,
-        tourName: tourData.tour,
+        tourName: tour,
         userName: '',
         people: '',
         contact: '',
@@ -29,10 +30,10 @@ const Booking = ({ tourData }) => {
         people: true
     });
 
-    const handleChange = e => {
+    const handleChange = (e) => {
         const { id, value } = e.target;
         setBooking(prev => ({ ...prev, [id]: value }));
-        setValidation(prevValidation => ({ ...prevValidation, [id]: value.trim() !== '' }));
+        setValidation((prevValidation) => ({ ...prevValidation, [id]: value.trim() !== '' }));
     };
 
     const totalamount = Number(price) * Number(booking.people);
