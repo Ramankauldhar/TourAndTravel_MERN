@@ -32,7 +32,7 @@ const PlacesInfo = () => {
 
   const { id } = useParams();
   const reviewMsgRef = useRef("");
-  const [review, setReviews] = useState([]);
+  const [reviewState, setReviews] = useState([]);
   const [tourRating, setTourRating] = useState(null);
   const { user } = useContext(Auth);
 
@@ -44,7 +44,7 @@ const PlacesInfo = () => {
 
   const options = { day: "numeric", month: "long", year: "numeric" };
 
-  const submitHandler = async e => {
+  const submitHandler = async (e) => {
     e.preventDefault();
     const reviewText = reviewMsgRef.current.value;
 
@@ -70,9 +70,10 @@ const PlacesInfo = () => {
       const result = await response.json();
       alert(result.message);
       //update reviews state to show the new review that the user added
-      setReviews([...reviews, reviewObj]);
+      setReviews(result);
       //Clear the input field
       reviewMsgRef.current.value = '';
+      setTourRating(0);
     }
     catch (error) {
       alert(error.message);
@@ -81,7 +82,7 @@ const PlacesInfo = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0)
-  }, [tour]);
+  }, [tourData]);
 
   return (
     <>
@@ -131,7 +132,7 @@ const PlacesInfo = () => {
           </div>
           <div className='extraInfoContainer'>
             <div>
-              <Booking tourData={tourData}/>
+              <Booking tourData={tourData} />
             </div>
             <div>
               <p className='titleText'><img src={cloudIcon} alt="temp in celsius icon" className='icon' /> Weather Guide</p>
@@ -208,7 +209,7 @@ const PlacesInfo = () => {
               <span onClick={() => setTourRating(5)} className={tourRating >= 5 ? 'star-filled' : ''}>5<i className="ri-star-fill"></i></span>
             </div>
             <div className='inputArea'>
-              <input type="text" placeholder='Write your reviews about this trip' ref={reviewMsgRef} required className='inputField' /><br/>
+              <input type="text" placeholder='Write your reviews about this trip' ref={reviewMsgRef} required className='inputField' /><br />
               <Button className='btn secondaryBtn reviewSubmitButton'>Submit</Button>
             </div>
           </Form>
@@ -217,8 +218,8 @@ const PlacesInfo = () => {
           </h5>
           <hr />
           <ListGroup className="userRview">
-            {reviews?.map(review => (
-              <div>
+            {reviews?.map((review, index) => (
+              <div key={index}>
                 <div className='reviewContainer'>
                   <div className="reviewContent">
                     <div>

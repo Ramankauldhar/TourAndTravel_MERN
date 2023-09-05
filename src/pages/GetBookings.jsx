@@ -3,7 +3,7 @@ import { Auth } from '../userAuth/Auth';
 import { BASE_URL } from '../utils/connConfig';
 
 const GetBookings = () => {
-    const { user} = useContext(Auth);
+    const { user } = useContext(Auth);
     const [bookings, setBookings] = useState([]);
 
     useEffect(() => {
@@ -30,13 +30,13 @@ const GetBookings = () => {
         <div>
             <h2>Your Bookings</h2>
             <div className='textNumber'>
-              <p className='totalTextOnUserBookingPage'>Total Bookings: ({bookings.length})</p>
+                <p className='totalTextOnUserBookingPage'>Total Bookings: ({bookings.length})</p>
             </div>
             {bookings.map((booking) => (
                 <div key={booking._id} className='bookingInfoDiv'>
                     <h5>Your Email: {booking.userEmail}</h5>
                     <p>Booked Under Name: {booking.userName}</p>
-                    <p>Tour Name: {booking.tourName}</p>
+                    <p>Tour Name: {booking.tour}</p>
                     <p>No of People: {booking.people}</p>
                     <p>Booked for Date: {new Date(booking.bookAt).toLocaleDateString()}</p>
                     {/* Add more booking details here */}

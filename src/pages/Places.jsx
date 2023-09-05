@@ -12,6 +12,8 @@ import { BASE_URL } from '../utils/connConfig';
 import './../styles/places.css';
 import './../styles/home.css';
 
+import planeImg from '../Images/plane.png';
+
 const Places = () => {
 
   const [pageCount, setPageCount] = useState(0);
@@ -28,7 +30,8 @@ const Places = () => {
 
   return (
     <>
-      <section className='animation moveFromRight'>
+      <section className='mainPlacesDiv'>
+        <img src={planeImg} alt="Animated Plane" className="planeImg" />
         <h2 className='tripsHeading'>All Trips</h2>
       </section>
       <section className='SearhSection'>
@@ -41,7 +44,7 @@ const Places = () => {
 
       <section className='tourListSection'>
         <Container>
-          <Row>
+          <Row className='animation'>
             <TourList />
             <Col lg="12">
               <div className='pagination d-flex align-item-center justify-content-center mt-a gap-2'>
@@ -60,14 +63,14 @@ const Places = () => {
 
       <section>
         <Container>
-        <h3>Check our feedbacks from other customers</h3>
+          <h3>Check our feedbacks from other customers</h3>
           <Row>
             <Testimonial />
           </Row>
         </Container>
       </section>
 
-      <section>
+      <section className='animation'>
         <NewsLetter />
       </section>
     </>

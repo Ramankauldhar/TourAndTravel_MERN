@@ -9,7 +9,7 @@ const About = () => {
   return (
     <div>
       <div className='BackgroundDiv'>
-        <img src={aboutUsImg} alt='office background picture' className="aboutBackgroundImage" />
+        <img src={aboutUsImg} alt='office background' className="aboutBackgroundImage" />
       </div>
       <div className='textDiv'>
         <section className='animation fadeBottom'>
@@ -43,14 +43,14 @@ const About = () => {
         </section>
       </div>
 
-      <section className='animation fadeRight'>
+      <section className='animation'>
         <h3 className='serviceTitle'>Our Services</h3>
         <div className='servicesContainer'>
           <ServiceList />
         </div>
       </section>
 
-      <section className='openingHoursSection animation fadeRight'>
+      <section className='openingHoursSection animation'>
         <div>
           <h3 className='openingHourTitle'>Our Opening Hours</h3>
           <ListGroup className='hoursList'>
@@ -73,7 +73,7 @@ const About = () => {
         </div>
       </section>
 
-      <section className="mapSection">
+      <section className="mapSection animation">
         <h3>Our Location</h3>
         <Map />
       </section>

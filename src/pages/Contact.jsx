@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import contactBackgroundImg from '../Images/contactBackground.avif';
-import { Button, Form, FormGroup} from "reactstrap";
+import { Button, Form, FormGroup } from "reactstrap";
 import planeImg from '../Images/plane.png';
 import contactUsImg from '../Images/contactUs.png';
 

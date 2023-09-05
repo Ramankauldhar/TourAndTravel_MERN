@@ -1,45 +1,55 @@
-.searchBar{
+.searchBar {
     background-color: rgb(228, 224, 224);
     align-items: center;
     justify-content: center;
-    margin-top:10px;
-    padding:20px;
+    margin-top: 10px;
+    padding: 20px;
     font-size: 18px;
     border-radius: 50px;
 }
-.form{
+
+.form {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
-input{
-    border:1px solid var(--secondary-color);
+
+input {
+    border: 1px solid var(--secondary-color);
     border-radius: 20PX;
     margin-left: 10px;
-    padding:10px;
+    padding: 10px;
 }
-.errorText{
+
+.errorText {
     color: red;
-    margin-left:10px;
+    margin-left: 10px;
     text-align: center;
 }
-.icon{
-    height:38px;
+
+.icon {
+    height: 38px;
     font-size: 12px;
-    color:var(--primary-color);
+    color: var(--primary-color);
 }
-.searchButton{
-    padding:15px;
+
+.searchButton {
+    padding: 15px;
     margin-left: 50px;
     background-color: var(--primary-color);
-    color:white;
+    color: white;
     border-radius: 20px;
 }
 
 @media only screen and (max-width: 826px) {
-    .form{
+    .form {
         display: flex;
-        flex-direction: column; /* Change flex direction to column for stacking elements */
-        align-items: center; 
+        flex-direction: column;
+        /* Change flex direction to column for stacking elements */
+        align-items: center;
+    }
+
+    .formGroup label {
+        font-size: medium;
     }
 }

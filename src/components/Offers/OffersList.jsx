@@ -11,13 +11,13 @@ const OffersList = () => {
 
     return (
         <>
-            {loading && <h6>Loading ...</h6>}
+            {loading && <button className="buttonload"><i className="fa fa-spinner fa-spin"></i>Loading</button>}
             {error && <h6>{error}</h6>}
             <div className="mainContainer">
                 {!loading && !error &&
                     offers?.map(place => (
-                        <div className="offerDetailsContainer">
-                            <OffersCard key={place._id} place={place} />
+                        <div key={place._id} className="offerDetailsContainer">
+                            <OffersCard place={place} />
                         </div>
                     ))
                 }

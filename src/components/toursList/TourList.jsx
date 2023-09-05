@@ -11,7 +11,7 @@ const TourList = () => {
   return (
     <>
       {
-        loading && <h6>Loading ...</h6>
+        loading && <button className="buttonload"><i className="fa fa-spinner fa-spin"></i>Loading</button>
       }
       {
         error && <h6>{error}</h6>

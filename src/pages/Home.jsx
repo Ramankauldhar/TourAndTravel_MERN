@@ -23,7 +23,7 @@ const Home = () => {
     </section>
     <h1>Travel Around The World With Us</h1>
 
-    <section className='firstSection animation moveFromBottom'>
+    <section className='firstSection'>
       <div className="introSection">
         <div className="introContainer">
           <div className="textContainer">
@@ -34,7 +34,7 @@ const Home = () => {
             We are here to make your experience even more enjoyable and meaningful by providing you the best package and travel guide to explore many places around the world.</p>
         </div>
 
-        <div className="infoContainer">
+        <div className="infoContainer animation fadeLeft">
           <div className='card'>
             <img src={memoriesImg} alt='Memories' className='imagesInCard' />
             <div className='cardFooter'>
@@ -57,20 +57,20 @@ const Home = () => {
       </div>
     </section>
 
-    <section className='searchSection animation moveFromBottom'>
+    <section className='searchSection animation'>
       <div>
         <SearchBar />
       </div>
     </section>
 
-    <section className='tripsSection animation moveFromLeft'>
+    <section className='tripsSection animation'>
       <div>
         <h2>Special Offers</h2>
         <OffersList />
       </div>
     </section>
 
-    <section className='allTripsSection animation moveFromBottom'>
+    <section className='allTripsSection animation'>
       <h3>All Trips</h3>
       <div className='tourListContainer'>
         <TourList />
@@ -78,7 +78,7 @@ const Home = () => {
     </section>
     <br />
 
-    <section className='animation moveFromBottom'>
+    <section className='animation'>
       <div className='gallerySection' id='gallery'>
         <h3>Gallery</h3>
         <div className='galleryContainer'>
@@ -87,7 +87,7 @@ const Home = () => {
       </div>
     </section>
 
-    <section className='testimonialSection animation moveFromBottom'>
+    <section className='testimonialSection'>
       <h3>Check our feedbacks from other customers</h3>
       <div className='testimonialContainer'>
         <Testimonials />
@@ -95,7 +95,7 @@ const Home = () => {
     </section>
     <br />
 
-    <section className='animation fadeLeft'>
+    <section className='animation'>
       <div className="NewsSection">
         <NewsLetter />
       </div>

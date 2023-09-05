@@ -6,23 +6,25 @@ import { useNavigate } from 'react-router-dom';
 import { Auth } from '../../userAuth/Auth';
 import { BASE_URL } from '../../utils/connConfig';
 
-const Booking = ({ tourData}) => {
-    const { price } = tourData;
+const Booking = ({ tourData }) => {
+    const { price, tour } = tourData;
     const navigate = useNavigate();
-    const {tour} = tourData;
 
     const { user } = useContext(Auth);
+    const tourName = tourData.tour;
+    console.log("tourData:", tourData); // Log tourData to check its structure
+    console.log("tour:", tour); // Log tour to check its value
+    console.log("tourName:", tourName); // Log tourName to check its value
 
     const [booking, setBooking] = useState({
         userId: user && user._id,
         userEmail: user && user.userEmail,
-        tourName: tour,
+        tour: tourName, // Assign the 'tour' value directly
         userName: '',
         people: '',
         contact: '',
         bookAt: ''
-    })
-
+    });
     const [validation, setValidation] = useState({
         userName: true,
         contact: true,
@@ -43,12 +45,12 @@ const Booking = ({ tourData}) => {
         e.preventDefault();
 
         console.log(booking);
-
+        console.log(tourData.tour);
         try {
             if (!user || user === undefined || user === null) {
                 return alert('Please Login First!');
             }
-            
+
             const response = await fetch(`${BASE_URL}/booking`, {
                 method: 'post',
                 headers: {
@@ -93,7 +95,7 @@ const Booking = ({ tourData}) => {
                         <h5>Price per person</h5>
                         <span>1 x ${price}</span>
                     </ListGroupItem>
-        
+
                     <ListGroupItem className='bookingBottomDetails'>
                         <h5>Your Price</h5>
                         <span>${totalamount}</span>

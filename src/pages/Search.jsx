@@ -5,6 +5,8 @@ import PlacesCard from '../shared/PlacesCard';
 import NewsLetter from '../shared/NewsLetter';
 import SearchBar from '../shared/SearchBar';
 
+import planeImg from '../Images/plane.png';
+
 const Search = () => {
   const location = useLocation();
   const [data, setData] = useState([]);
@@ -23,6 +25,7 @@ const Search = () => {
     <>
       <div>
         <section className='animation moveFromRight'>
+          <img src={planeImg} alt="Animated Plane" className="planeImg" />
           <h2 className='tripsHeading'>Tour Search Result</h2>
         </section>
         <section className='SearhSection'>

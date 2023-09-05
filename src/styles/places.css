@@ -1,3 +1,7 @@
+.mainPlacesDiv {
+    position: relative;
+}
+
 .tripsHeading {
     background-image: url("../Images/backgroundPlaces.jpeg");
     height: 450px;
@@ -31,4 +35,11 @@
 .activePage {
     background-color: var(--secondary-color);
     color: white !important;
+}
+
+@media only screen and (max-width: 580px) {
+    .tripsHeading {
+        height: 280px;
+    }
+
 }

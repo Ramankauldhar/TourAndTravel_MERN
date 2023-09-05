@@ -4,9 +4,9 @@ import backgroundImg2 from '../../Images/backgroundImg2.jpeg';
 import backgroundVideo from '../../Images/backgroundVideo.mp4';
 
 const MediaRotator = () => {
- 
+
   const mediaUrls = [
-    backgroundImg,backgroundVideo, backgroundImg2,
+    backgroundImg, backgroundVideo, backgroundImg2,
   ];
 
   const [currentmediaUrl, setCurrentMediaUrls] = useState(mediaUrls[0]);
@@ -28,13 +28,13 @@ const MediaRotator = () => {
   return (
     <div style={{ position: 'relative' }}>
       {isVideo ? (
-        <video src={currentmediaUrl} autoPlay muted loop className='backgroundVideo'/>
+        <video src={currentmediaUrl} autoPlay muted loop className='backgroundVideo' />
       ) : (
         <img src={currentmediaUrl} alt="background" className='backgroundImage' />
       )}
       <div className='textOnImages'>
-        <p className='firstText'>It's time to travel</p>
-        <p className='secondText'>Let's start your travel journey with us!</p>
+        <p className='firstText animation fadeBottom'>It's time to travel</p>
+        <p className='secondText animation fadeBottom'>Let's start your travel journey with us!</p>
       </div>
     </div>
   );

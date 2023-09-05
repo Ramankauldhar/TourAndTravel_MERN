@@ -2,8 +2,7 @@
     background-color: #f3f5f7;
     text-align: center;
     justify-content: center;
-    margin-left: 0px;
-    margin-right: 0px;
+    width: 100%;
 }
 
 .newsletter {
@@ -53,5 +52,13 @@
     .newsLetterInput {
         display: block;
         margin: 5px;
+    }
+
+    .leftText {
+        width: 100%;
+    }
+
+    .rightText {
+        display: none;
     }
 }
