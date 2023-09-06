@@ -161,4 +161,7 @@
     .planDetailsText, .daysPlanText img{
       width:100%;
     }
+    .collapsible{
+      display: block;
+    }
   }

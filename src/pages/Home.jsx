@@ -34,7 +34,7 @@ const Home = () => {
             We are here to make your experience even more enjoyable and meaningful by providing you the best package and travel guide to explore many places around the world.</p>
         </div>
 
-        <div className="infoContainer animation fadeLeft">
+        <div className="infoContainer animation">
           <div className='card'>
             <img src={memoriesImg} alt='Memories' className='imagesInCard' />
             <div className='cardFooter'>
@@ -57,7 +57,7 @@ const Home = () => {
       </div>
     </section>
 
-    <section className='searchSection animation'>
+    <section className='searchSection'>
       <div>
         <SearchBar />
       </div>

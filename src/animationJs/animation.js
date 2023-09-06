@@ -8,9 +8,9 @@ function animation() {
     var elementVisible = 200;
 
     if (elementTop < windowHeight - elementVisible) {
-      animations[i].classList.add("active");
+      animations[i].classList.add("active2");
     } else {
-      animations[i].classList.remove("active");
+      animations[i].classList.remove("active2");
     }
   }
 }

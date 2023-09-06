@@ -12,10 +12,7 @@ const Booking = ({ tourData }) => {
 
     const { user } = useContext(Auth);
     const tourName = tourData.tour;
-    console.log("tourData:", tourData); // Log tourData to check its structure
-    console.log("tour:", tour); // Log tour to check its value
-    console.log("tourName:", tourName); // Log tourName to check its value
-
+    
     const [booking, setBooking] = useState({
         userId: user && user._id,
         userEmail: user && user.userEmail,
@@ -41,11 +38,10 @@ const Booking = ({ tourData }) => {
     const totalamount = Number(price) * Number(booking.people);
 
     //To send the data to the server
-    const handleClick = async e => {
+    const handleClick = async (e) => {
         e.preventDefault();
 
         console.log(booking);
-        console.log(tourData.tour);
         try {
             if (!user || user === undefined || user === null) {
                 return alert('Please Login First!');
