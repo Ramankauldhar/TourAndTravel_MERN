@@ -4,6 +4,7 @@ import { useLocation } from 'react-router-dom';
 import PlacesCard from '../shared/PlacesCard';
 import NewsLetter from '../shared/NewsLetter';
 import SearchBar from '../shared/SearchBar';
+import OffersCard from '../shared/OffersCard';
 
 import planeImg from '../Images/plane.png';
 
@@ -45,7 +46,11 @@ const Search = () => {
               ) : (
                 data.map(place => (
                   <Col lg='3' className='mb-4' key={place._id}>
-                    <PlacesCard place={place} />
+                    {place.featured ? (
+                      <PlacesCard place={place} />
+                    ) : (
+                      <OffersCard place={place} />
+                    )}
                   </Col>
                 ))
               )}

@@ -6,9 +6,9 @@ import contactUsImg from '../Images/contactUs.png';
 
 const Contact = () => {
   const [credentials, setCredentials] = useState({
-    email: 'rmnkaul@gmail.com',
-    contact: '',
-    Message: ''
+    email: undefined,
+    contact: undefined,
+    Message: undefined
   });
 
   const handleChange = e => {
@@ -18,10 +18,22 @@ const Contact = () => {
       }
     ))
   };
-  const handleClick = e => {
+  const handleClick = (e) => {
     e.preventDefault();
-  }
 
+    if (!credentials.email || !credentials.contact || !credentials.Message) {
+      window.alert('Please fill in all the required fields with correct information.');
+    }
+    else {
+      window.alert('Your message has been submitted successfully!');
+      setCredentials({
+        email: '',
+        contact: '',
+        Message: ''
+      });
+    }
+
+  };
   return (
     <div>
       <div className='contactusDiv'>
@@ -42,7 +54,7 @@ const Contact = () => {
                 <i className="ri-mail-open-fill frontIcon"></i><label>Email:</label><input type='email' placeholder='Enter Your Email' id="email" required onChange={handleChange} />
               </FormGroup>
               <FormGroup>
-                <i className="ri-phone-fill frontIcon"></i><label>Contact:</label><input type='number' placeholder='Enter Your Contact' id="contact" required onChange={handleChange} />
+                <i className="ri-phone-fill frontIcon"></i><label>Contact:</label><input type='tel' placeholder='Enter Your Contact' id="contact" required onChange={handleChange} />
               </FormGroup>
               <FormGroup>
                 <i className="ri-file-text-line frontIcon"></i><label>Message:</label><textarea rows="4" cols="50" id="message" required onChange={handleChange}></textarea><br />

@@ -11,12 +11,10 @@ const Booking = ({ tourData }) => {
     const navigate = useNavigate();
 
     const { user } = useContext(Auth);
-    const tourName = tourData.tour;
-    
+
     const [booking, setBooking] = useState({
         userId: user && user._id,
         userEmail: user && user.userEmail,
-        tour: tourName, // Assign the 'tour' value directly
         userName: '',
         people: '',
         contact: '',
@@ -40,12 +38,15 @@ const Booking = ({ tourData }) => {
     //To send the data to the server
     const handleClick = async (e) => {
         e.preventDefault();
-
-        console.log(booking);
         try {
             if (!user || user === undefined || user === null) {
                 return alert('Please Login First!');
             }
+            const bookingData = {
+                ...booking,
+                tour: tourData.tour,
+            };
+
 
             const response = await fetch(`${BASE_URL}/booking`, {
                 method: 'post',
@@ -53,7 +54,7 @@ const Booking = ({ tourData }) => {
                     'content-type': 'application/json',
                 },
                 credentials: 'include',
-                body: JSON.stringify(booking)
+                body: JSON.stringify(bookingData),
             });
             const result = await response.json();
             if (!response.ok) {
