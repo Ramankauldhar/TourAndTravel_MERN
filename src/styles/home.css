@@ -329,9 +329,9 @@ h4 {
 .BackgroundDiv,
 .contactusDiv {
     position: relative;
-    background-color: #96b6e0;
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
     width: 100vw;
-    height:100vh;
+    height: 100vh;
 }
 
 .aboutBackgroundImage,

@@ -20,7 +20,7 @@ const TourList = () => {
         {
           !loading && !error &&
           allTours?.map(place => (
-            <div key={place._id} className="placeContainer">
+            <div key={place._id} className="placeContainer animation">
               <PlacesCard place={place} />
             </div>
           ))

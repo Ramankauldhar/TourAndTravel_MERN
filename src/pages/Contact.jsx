@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import contactBackgroundImg from '../Images/contactBackground.avif';
 import { Button, Form, FormGroup } from "reactstrap";
 import planeImg from '../Images/plane.png';
 import contactUsImg from '../Images/contactUs.png';
@@ -37,7 +36,6 @@ const Contact = () => {
   return (
     <div>
       <div className='contactusDiv'>
-        <img src={contactBackgroundImg} alt='Colorfull background' className="contactImage" />
       </div>
       <div className='textDiv'>
         <img src={planeImg} alt="Animated Plane" className="planeImg" />

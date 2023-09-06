@@ -16,7 +16,7 @@ const OffersList = () => {
             <div className="mainContainer">
                 {!loading && !error &&
                     offers?.map(place => (
-                        <div key={place._id} className="offerDetailsContainer">
+                        <div key={place._id} className="offerDetailsContainer animation">
                             <OffersCard place={place} />
                         </div>
                     ))

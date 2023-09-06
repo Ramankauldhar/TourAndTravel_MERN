@@ -63,14 +63,14 @@ const Home = () => {
       </div>
     </section>
 
-    <section className='tripsSection animation'>
+    <section className='tripsSection'>
       <div>
         <h2>Special Offers</h2>
         <OffersList />
       </div>
     </section>
 
-    <section className='allTripsSection animation'>
+    <section className='allTripsSection'>
       <h3>All Trips</h3>
       <div className='tourListContainer'>
         <TourList />
